@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bsnf7mdvlin42"
-path="res://.godot/imported/Fighters2.png-2a6e54c07db042dd9700aa0d62219ed5.ctex"
+uid="uid://cr4n8q656x1ua"
+path="res://.godot/imported/Mario.png-c8f98b59cdd0d38f2226e8b8c51b1e72.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Pics/Fighters2.png"
-dest_files=["res://.godot/imported/Fighters2.png-2a6e54c07db042dd9700aa0d62219ed5.ctex"]
+source_file="res://Pics/Fighters/Mario.png"
+dest_files=["res://.godot/imported/Mario.png-c8f98b59cdd0d38f2226e8b8c51b1e72.ctex"]
 
 [params]
 

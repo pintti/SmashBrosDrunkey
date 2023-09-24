@@ -1,0 +1,45 @@
+[gd_scene load_steps=2 format=3 uid="uid://cthsg4l52oa25"]
+
+[ext_resource type="Script" path="res://main_menu.gd" id="1_5uql8"]
+
+[node name="MainMenu" type="Node"]
+script = ExtResource("1_5uql8")
+
+[node name="Smash" type="Button" parent="."]
+offset_left = 60.0
+offset_top = 54.0
+offset_right = 526.0
+offset_bottom = 312.0
+text = "SMASH"
+
+[node name="PelaajatStats" type="Button" parent="."]
+offset_left = 547.0
+offset_top = 40.0
+offset_right = 914.0
+offset_bottom = 187.0
+text = "Pelaaja statsit"
+
+[node name="KYS" type="Button" parent="."]
+offset_left = 568.0
+offset_top = 337.0
+offset_right = 939.0
+offset_bottom = 514.0
+text = "KYS
+"
+
+[node name="Dunno" type="Button" parent="."]
+offset_left = 594.0
+offset_top = 203.0
+offset_right = 885.0
+offset_bottom = 295.0
+text = "Random"
+
+[node name="Palauta" type="Button" parent="."]
+offset_left = 111.0
+offset_top = 344.0
+offset_right = 454.0
+offset_bottom = 494.0
+text = "Palauta
+"
+
+[connection signal="pressed" from="Smash" to="." method="_on_smash_pressed"]
