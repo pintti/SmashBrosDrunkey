@@ -1,0 +1,1639 @@
+[gd_scene load_steps=82 format=3 uid="uid://dfgvfxgpn11gn"]
+
+[ext_resource type="Script" path="res://Scripts/char_select.gd" id="1_s6xvx"]
+[ext_resource type="Script" path="res://Scripts/Button.gd" id="2_ir8lh"]
+[ext_resource type="Texture2D" uid="uid://cr4n8q656x1ua" path="res://Pics/Fighters/Mario.png" id="3_tvj88"]
+[ext_resource type="Texture2D" uid="uid://dxm6xad8gumek" path="res://Pics/Fighters/Bowser.png" id="4_7w8ks"]
+[ext_resource type="Texture2D" uid="uid://bl1oqsg6kh0ip" path="res://Pics/Fighters/Link.png" id="4_2384q"]
+[ext_resource type="Texture2D" uid="uid://daacprvdaqjf8" path="res://Pics/Fighters/Samus.png" id="5_3gawt"]
+[ext_resource type="Texture2D" uid="uid://cjju86wn6sjv6" path="res://Pics/Fighters/Ridley.png" id="5_8txcw"]
+[ext_resource type="Texture2D" uid="uid://3255c1osjq33" path="res://Pics/Fighters/DonkeyKong.png" id="6_iuh5w"]
+[ext_resource type="Texture2D" uid="uid://14bhdqrvaknc" path="res://Pics/Fighters/Dark Samus.png" id="7_rt40i"]
+[ext_resource type="Texture2D" uid="uid://tse0u76ad50d" path="res://Pics/Fighters/Yoshi.png" id="8_0etid"]
+[ext_resource type="Texture2D" uid="uid://dxmem0gku5isv" path="res://Pics/Fighters/Kirby.png" id="9_puk5c"]
+[ext_resource type="Texture2D" uid="uid://dt5jylc23hklj" path="res://Pics/Fighters/Fox.png" id="10_atdq4"]
+[ext_resource type="Texture2D" uid="uid://c2ddu72j5y3gn" path="res://Pics/Fighters/Pikachu.png" id="11_iqxff"]
+[ext_resource type="Texture2D" uid="uid://cmm6i2p475lnd" path="res://Pics/Fighters/Luigi.png" id="12_5vrst"]
+[ext_resource type="Texture2D" uid="uid://hwyxgi01x6rc" path="res://Pics/Fighters/Ness.png" id="13_7qa8p"]
+[ext_resource type="Texture2D" uid="uid://dulu0lri4kvnt" path="res://Pics/Fighters/CapFalcon.png" id="14_tk10l"]
+[ext_resource type="Texture2D" uid="uid://qs7sfqhj826q" path="res://Pics/Fighters/Jiggly.png" id="15_5dopw"]
+[ext_resource type="Texture2D" uid="uid://dsj5yhxx0epqu" path="res://Pics/Fighters/Peach.png" id="16_7vfld"]
+[ext_resource type="Texture2D" uid="uid://5sibpketb1y3" path="res://Pics/Fighters/IceClimbers.png" id="18_ndbph"]
+[ext_resource type="Texture2D" uid="uid://d4ehv4l2hfs6a" path="res://Pics/Fighters/Daisy.png" id="19_8pa0f"]
+[ext_resource type="Texture2D" uid="uid://bgwv2daplc16n" path="res://Pics/Fighters/Sheik.png" id="20_bp88g"]
+[ext_resource type="Texture2D" uid="uid://drboockk0gnwf" path="res://Pics/Fighters/Zelda.png" id="21_g1jq0"]
+[ext_resource type="Texture2D" uid="uid://uhekx1rssxe7" path="res://Pics/Fighters/DrMario.png" id="22_tipgr"]
+[ext_resource type="Texture2D" uid="uid://b0dxstbgq4bkc" path="res://Pics/Fighters/Pichu.png" id="23_m6wes"]
+[ext_resource type="Texture2D" uid="uid://b6xtsvu58pvpl" path="res://Pics/Fighters/Falco.png" id="24_dmf76"]
+[ext_resource type="Texture2D" uid="uid://dr4f81eh0h3r5" path="res://Pics/Fighters/Marth.png" id="25_xfqr6"]
+[ext_resource type="Texture2D" uid="uid://cy0tdpsdr0we3" path="res://Pics/Fighters/Lucina.png" id="26_v3gkm"]
+[ext_resource type="Texture2D" uid="uid://cxj266egeuyo0" path="res://Pics/Fighters/YoungLink.png" id="27_5yxci"]
+[ext_resource type="Texture2D" uid="uid://fylc8uu4iwh2" path="res://Pics/Fighters/Ganondorf.png" id="28_lp764"]
+[ext_resource type="Texture2D" uid="uid://b8h8uce4loho0" path="res://Pics/Fighters/Mewtwo.png" id="29_qxpwb"]
+[ext_resource type="Texture2D" uid="uid://dk5cjru1x2vhg" path="res://Pics/Fighters/Chrom.png" id="30_ku7w1"]
+[ext_resource type="Texture2D" uid="uid://brp8ipu0nbyqh" path="res://Pics/Fighters/MrGay.png" id="31_yqrdy"]
+[ext_resource type="Texture2D" uid="uid://ck83jmvffd16a" path="res://Pics/Fighters/Roy.png" id="32_dadra"]
+[ext_resource type="Texture2D" uid="uid://q3j65jpqvykm" path="res://Pics/Fighters/MetaKnight.png" id="33_srlqr"]
+[ext_resource type="Texture2D" uid="uid://cfr64shjxab2d" path="res://Pics/Fighters/Pit.png" id="34_rpp8i"]
+[ext_resource type="Texture2D" uid="uid://bi315mtot24la" path="res://Pics/Fighters/DarkPit.png" id="35_ognro"]
+[ext_resource type="Texture2D" uid="uid://gtkliw4yby6b" path="res://Pics/Fighters/ZSS.png" id="36_81xaw"]
+[ext_resource type="Texture2D" uid="uid://c54smwuf5byvw" path="res://Pics/Fighters/Wario.png" id="37_0tmac"]
+[ext_resource type="Texture2D" uid="uid://bfk8xuo6rr2lh" path="res://Pics/Fighters/Snake.png" id="38_bvpdn"]
+[ext_resource type="Texture2D" uid="uid://c1m1n61ipmhcd" path="res://Pics/Fighters/Ike.png" id="39_lmp7j"]
+[ext_resource type="Texture2D" uid="uid://d2fhdq1cpktlt" path="res://Pics/Fighters/PKMNTrainer.png" id="40_vjocc"]
+[ext_resource type="Texture2D" uid="uid://d01w1ncd7yoc6" path="res://Pics/Fighters/DiddyKong.png" id="41_du8kg"]
+[ext_resource type="Texture2D" uid="uid://b5ngkjcerdbri" path="res://Pics/Fighters/Lucas.png" id="42_vt85g"]
+[ext_resource type="Texture2D" uid="uid://cntgr1dug2xya" path="res://Pics/Fighters/DDD.png" id="43_v7n3e"]
+[ext_resource type="Texture2D" uid="uid://617yccdb2uww" path="res://Pics/Fighters/Olimar.png" id="44_fap52"]
+[ext_resource type="Texture2D" uid="uid://y8gp3gylp3uk" path="res://Pics/Fighters/Sonic.png" id="45_1p5qr"]
+[ext_resource type="Texture2D" uid="uid://bnl5s6hx5wssv" path="res://Pics/Fighters/Lucario.png" id="46_1x7y5"]
+[ext_resource type="Texture2D" uid="uid://2v048ktlhw5s" path="res://Pics/Fighters/ROB.png" id="47_xkytb"]
+[ext_resource type="Texture2D" uid="uid://be2ayvq8fsy5y" path="res://Pics/Fighters/ToonLink.png" id="48_t8t6e"]
+[ext_resource type="Texture2D" uid="uid://cu3ovlwsqo57" path="res://Pics/Fighters/Wolf.png" id="49_c1ctn"]
+[ext_resource type="Texture2D" uid="uid://dqnx7yv3nx50b" path="res://Pics/Fighters/Villager.png" id="50_o7cvr"]
+[ext_resource type="Texture2D" uid="uid://bk0p24um23ykd" path="res://Pics/Fighters/Megaman.png" id="51_k75dq"]
+[ext_resource type="Texture2D" uid="uid://ruvrcoginau6" path="res://Pics/Fighters/WFT.png" id="52_mchfn"]
+[ext_resource type="Texture2D" uid="uid://2ws7arasqxq3" path="res://Pics/Fighters/Rosalina.png" id="53_wcp6s"]
+[ext_resource type="Texture2D" uid="uid://bfj3obmkp1ymu" path="res://Pics/Fighters/LilMac.png" id="54_dbdri"]
+[ext_resource type="Texture2D" uid="uid://k04ktr82stl2" path="res://Pics/Fighters/Greninja.png" id="55_qjlen"]
+[ext_resource type="Texture2D" uid="uid://ddkfqbx80bqnh" path="res://Pics/Fighters/Pacman.png" id="56_07e75"]
+[ext_resource type="Texture2D" uid="uid://b2jqb3h6sjykm" path="res://Pics/Fighters/Robin.png" id="57_c3n6f"]
+[ext_resource type="Texture2D" uid="uid://b4ndgu45lbmrc" path="res://Pics/Fighters/Palutena.png" id="58_vvyrd"]
+[ext_resource type="Texture2D" uid="uid://cq3onchvpv83v" path="res://Pics/Fighters/Shulk.png" id="59_wapbg"]
+[ext_resource type="Texture2D" uid="uid://dgdv2ggqruv2d" path="res://Pics/Fighters/BowserJr.png" id="60_hw50k"]
+[ext_resource type="Texture2D" uid="uid://chbx4d2wlffed" path="res://Pics/Fighters/DuckHunt.png" id="61_1dh2f"]
+[ext_resource type="Texture2D" uid="uid://byv1ew164hrnr" path="res://Pics/Fighters/Ryu.png" id="62_bt73i"]
+[ext_resource type="Texture2D" uid="uid://cu3pvw11gbbda" path="res://Pics/Fighters/Ken.png" id="63_e6gug"]
+[ext_resource type="Texture2D" uid="uid://cxmhha21im4nx" path="res://Pics/Fighters/Cloud.png" id="64_eexsa"]
+[ext_resource type="Texture2D" uid="uid://d33r17h046c4v" path="res://Pics/Fighters/Corrin.png" id="65_s212a"]
+[ext_resource type="Texture2D" uid="uid://cqwf5bfwsp3ws" path="res://Pics/Fighters/Bayonetta.png" id="66_u18lr"]
+[ext_resource type="Texture2D" uid="uid://cig5jup3n4ytl" path="res://Pics/Fighters/Inkling.png" id="67_b2eoe"]
+[ext_resource type="Texture2D" uid="uid://dir7wyww1udt8" path="res://Pics/Fighters/Richter.png" id="69_krtqf"]
+[ext_resource type="Texture2D" uid="uid://cnvk8r68cedo2" path="res://Pics/Fighters/Krool.png" id="70_snxa3"]
+[ext_resource type="Texture2D" uid="uid://bvgl1sgnstfmm" path="res://Pics/Fighters/Simon.png" id="71_ryedq"]
+[ext_resource type="Texture2D" uid="uid://dic0bd68bii0i" path="res://Pics/Fighters/Isabella.png" id="72_e2qug"]
+[ext_resource type="Texture2D" uid="uid://cqyq4w1csen8w" path="res://Pics/Fighters/Incineroar.png" id="73_y5uv1"]
+[ext_resource type="Texture2D" uid="uid://cqohim1t4tcco" path="res://Pics/Fighters/Plant.png" id="74_jjdrt"]
+[ext_resource type="Texture2D" uid="uid://cblanuftmeerm" path="res://Pics/Fighters/Joker.png" id="75_c4yag"]
+[ext_resource type="Texture2D" uid="uid://nsqe70wn8pqn" path="res://Pics/Fighters/JaajoSnake.png" id="76_lypbs"]
+[ext_resource type="Texture2D" uid="uid://elm22q4c7hf7" path="res://Pics/Fighters/PacmanJoe.png" id="77_pfexk"]
+[ext_resource type="Texture2D" uid="uid://bjv6q7ceu3mrl" path="res://Pics/Fighters/Hero.png" id="78_lor7q"]
+[ext_resource type="Texture2D" uid="uid://dsl64ql41a1yn" path="res://Pics/Fighters/Banjo.png" id="79_g8p5o"]
+[ext_resource type="Texture2D" uid="uid://vhwnf1y01iq7" path="res://Pics/Fighters/Terry.png" id="80_cc0sk"]
+[ext_resource type="Texture2D" uid="uid://cp3aciwcsax24" path="res://Pics/Fighters/Byleth.png" id="81_awvtc"]
+
+[node name="CharSelect" type="Node"]
+script = ExtResource("1_s6xvx")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+show_behind_parent = true
+offset_right = 1278.0
+offset_bottom = 722.0
+
+[node name="SpriteButton" type="Button" parent="."]
+anchors_preset = -1
+anchor_left = 0.041
+anchor_top = 0.084
+anchor_right = 0.041
+anchor_bottom = 0.084
+offset_left = -40.312
+offset_top = -48.064
+offset_right = 40.688
+offset_bottom = 47.936
+script = ExtResource("2_ir8lh")
+
+[node name="Sprite2D" type="Sprite2D" parent="SpriteButton"]
+position = Vector2(40, 46)
+texture = ExtResource("3_tvj88")
+
+[node name="SpriteButton2" type="Button" parent="."]
+anchors_preset = -1
+anchor_left = 0.195
+anchor_top = 0.084
+anchor_right = 0.195
+anchor_bottom = 0.084
+offset_left = -41.976
+offset_top = -47.92
+offset_right = 41.024
+offset_bottom = 48.08
+script = ExtResource("2_ir8lh")
+
+[node name="Sprite2D" type="Sprite2D" parent="SpriteButton2"]
+position = Vector2(39, 46)
+texture = ExtResource("4_2384q")
+
+[node name="SpriteButton3" type="Button" parent="."]
+anchors_preset = -1
+anchor_left = 0.272
+anchor_top = 0.084
+anchor_right = 0.272
+anchor_bottom = 0.084
+offset_left = -41.936
+offset_top = -48.064
+offset_right = 41.064
+offset_bottom = 47.936
+script = ExtResource("2_ir8lh")
+
+[node name="Sprite2D" type="Sprite2D" parent="SpriteButton3"]
+position = Vector2(40, 46)
+texture = ExtResource("5_3gawt")
+
+[node name="SpriteButton4" type="Button" parent="."]
+anchors_preset = -1
+anchor_left = 0.116
+anchor_top = 0.084
+anchor_right = 0.116
+anchor_bottom = 0.084
+offset_left = -41.712
+offset_top = -47.92
+offset_right = 41.288
+offset_bottom = 48.08
+script = ExtResource("2_ir8lh")
+
+[node name="Sprite2D" type="Sprite2D" parent="SpriteButton4"]
+position = Vector2(40, 48)
+texture = ExtResource("6_iuh5w")
+
+[node name="SpriteButton5" type="Button" parent="."]
+anchors_preset = -1
+anchor_left = 0.348
+anchor_top = 0.084
+anchor_right = 0.348
+anchor_bottom = 0.084
+offset_left = -41.36
+offset_top = -47.92
+offset_right = 41.64
+offset_bottom = 48.08
+script = ExtResource("2_ir8lh")
+
+[node name="Sprite2D" type="Sprite2D" parent="SpriteButton5"]
+position = Vector2(40, 48)
+texture = ExtResource("7_rt40i")
+
+[node name="SpriteButton6" type="Button" parent="."]
+anchors_preset = -1
+anchor_left = 0.425
+anchor_top = 0.084
+anchor_right = 0.425
+anchor_bottom = 0.084
+offset_left = -40.936
+offset_top = -47.92
+offset_right = 42.064
+offset_bottom = 48.08
+script = ExtResource("2_ir8lh")
+
+[node name="Sprite2D" type="Sprite2D" parent="SpriteButton6"]
+position = Vector2(40, 48)
+texture = ExtResource("8_0etid")
+
+[node name="SpriteButton7" type="Button" parent="."]
+anchors_preset = -1
+anchor_left = 0.506
+anchor_top = 0.084
+anchor_right = 0.506
+anchor_bottom = 0.084
+offset_left = -41.6161
+offset_top = -47.92
+offset_right = 41.3839
+offset_bottom = 48.08
+script = ExtResource("2_ir8lh")
+
+[node name="Sprite2D" type="Sprite2D" parent="SpriteButton7"]
+position = Vector2(40, 48)
+texture = ExtResource("9_puk5c")
+
+[node name="SpriteButton8" type="Button" parent="."]
+anchors_preset = -1
+anchor_left = 0.582
+anchor_top = 0.084
+anchor_right = 0.582
+anchor_bottom = 0.084
+offset_left = -41.8961
+offset_top = -47.92
+offset_right = 41.1039
+offset_bottom = 48.08
+script = ExtResource("2_ir8lh")
+
+[node name="Sprite2D" type="Sprite2D" parent="SpriteButton8"]
+position = Vector2(40, 48)
+texture = ExtResource("10_atdq4")
+
+[node name="SpriteButton9" type="Button" parent="."]
+anchors_preset = -1
+anchor_left = 0.655
+anchor_top = 0.084
+anchor_right = 0.655
+anchor_bottom = 0.084
+offset_left = -41.3361
+offset_top = -47.92
+offset_right = 41.6639
+offset_bottom = 48.08
+script = ExtResource("2_ir8lh")
+
+[node name="Sprite2D" type="Sprite2D" parent="SpriteButton9"]
+position = Vector2(40, 48)
+texture = ExtResource("11_iqxff")
+
+[node name="SpriteButton10" type="Button" parent="."]
+anchors_preset = -1
+anchor_left = 0.726
+anchor_top = 0.084
+anchor_right = 0.726
+anchor_bottom = 0.084
+offset_left = -41.2161
+offset_top = -47.92
+offset_right = 41.7839
+offset_bottom = 48.08
+script = ExtResource("2_ir8lh")
+
+[node name="Sprite2D" type="Sprite2D" parent="SpriteButton10"]
+position = Vector2(40, 48)
+texture = ExtResource("12_5vrst")
+
+[node name="SpriteButton11" type="Button" parent="."]
+anchors_preset = -1
+anchor_left = 0.801
+anchor_top = 0.084
+anchor_right = 0.801
+anchor_bottom = 0.084
+offset_left = -41.2161
+offset_top = -47.92
+offset_right = 41.7839
+offset_bottom = 48.08
+script = ExtResource("2_ir8lh")
+
+[node name="Sprite2D" type="Sprite2D" parent="SpriteButton11"]
+position = Vector2(40, 48)
+texture = ExtResource("13_7qa8p")
+
+[node name="SpriteButton12" type="Button" parent="."]
+anchors_preset = -1
+anchor_left = 0.875
+anchor_top = 0.084
+anchor_right = 0.875
+anchor_bottom = 0.084
+offset_left = -41.9362
+offset_top = -47.92
+offset_right = 41.0638
+offset_bottom = 48.08
+script = ExtResource("2_ir8lh")
+
+[node name="Sprite2D" type="Sprite2D" parent="SpriteButton12"]
+position = Vector2(40, 48)
+texture = ExtResource("14_tk10l")
+
+[node name="SpriteButton13" type="Button" parent="."]
+anchors_preset = -1
+anchor_left = 0.952
+anchor_top = 0.086
+anchor_right = 0.952
+anchor_bottom = 0.086
+offset_left = -41.4961
+offset_top = -48.36
+offset_right = 41.5039
+offset_bottom = 47.64
+script = ExtResource("2_ir8lh")
+
+[node name="Sprite2D" type="Sprite2D" parent="SpriteButton13"]
+position = Vector2(40, 48)
+texture = ExtResource("15_5dopw")
+
+[node name="SpriteButton14" type="Button" parent="."]
+anchors_preset = -1
+anchor_left = 0.041
+anchor_top = 0.223
+anchor_right = 0.041
+anchor_bottom = 0.223
+offset_left = -40.312
+offset_top = -48.144
+offset_right = 40.688
+offset_bottom = 47.856
+script = ExtResource("2_ir8lh")
+
+[node name="Sprite2D" type="Sprite2D" parent="SpriteButton14"]
+position = Vector2(40, 46)
+texture = ExtResource("16_7vfld")
+
+[node name="SpriteButton15" type="Button" parent="."]
+anchors_preset = -1
+anchor_left = 0.195
+anchor_top = 0.223
+anchor_right = 0.195
+anchor_bottom = 0.223
+offset_left = -41.976
+offset_top = -48.0
+offset_right = 41.024
+offset_bottom = 48.0
+script = ExtResource("2_ir8lh")
+
+[node name="Sprite2D" type="Sprite2D" parent="SpriteButton15"]
+position = Vector2(39, 46)
+texture = ExtResource("4_7w8ks")
+
+[node name="SpriteButton16" type="Button" parent="."]
+anchors_preset = -1
+anchor_left = 0.272
+anchor_top = 0.223
+anchor_right = 0.272
+anchor_bottom = 0.223
+offset_left = -41.936
+offset_top = -48.144
+offset_right = 41.064
+offset_bottom = 47.856
+script = ExtResource("2_ir8lh")
+
+[node name="Sprite2D" type="Sprite2D" parent="SpriteButton16"]
+position = Vector2(40, 46)
+texture = ExtResource("18_ndbph")
+
+[node name="SpriteButton17" type="Button" parent="."]
+anchors_preset = -1
+anchor_left = 0.116
+anchor_top = 0.223
+anchor_right = 0.116
+anchor_bottom = 0.223
+offset_left = -41.712
+offset_top = -48.0
+offset_right = 41.288
+offset_bottom = 48.0
+script = ExtResource("2_ir8lh")
+
+[node name="Sprite2D" type="Sprite2D" parent="SpriteButton17"]
+position = Vector2(40, 48)
+texture = ExtResource("19_8pa0f")
+
+[node name="SpriteButton18" type="Button" parent="."]
+anchors_preset = -1
+anchor_left = 0.348
+anchor_top = 0.223
+anchor_right = 0.348
+anchor_bottom = 0.223
+offset_left = -41.36
+offset_top = -48.0
+offset_right = 41.64
+offset_bottom = 48.0
+script = ExtResource("2_ir8lh")
+
+[node name="Sprite2D" type="Sprite2D" parent="SpriteButton18"]
+position = Vector2(40, 48)
+texture = ExtResource("20_bp88g")
+
+[node name="SpriteButton19" type="Button" parent="."]
+anchors_preset = -1
+anchor_left = 0.425
+anchor_top = 0.223
+anchor_right = 0.425
+anchor_bottom = 0.223
+offset_left = -40.936
+offset_top = -48.0
+offset_right = 42.064
+offset_bottom = 48.0
+script = ExtResource("2_ir8lh")
+
+[node name="Sprite2D" type="Sprite2D" parent="SpriteButton19"]
+position = Vector2(40, 48)
+texture = ExtResource("21_g1jq0")
+
+[node name="SpriteButton20" type="Button" parent="."]
+anchors_preset = -1
+anchor_left = 0.506
+anchor_top = 0.223
+anchor_right = 0.506
+anchor_bottom = 0.223
+offset_left = -41.6161
+offset_top = -48.0
+offset_right = 41.3839
+offset_bottom = 48.0
+script = ExtResource("2_ir8lh")
+
+[node name="Sprite2D" type="Sprite2D" parent="SpriteButton20"]
+position = Vector2(40, 48)
+texture = ExtResource("22_tipgr")
+
+[node name="SpriteButton21" type="Button" parent="."]
+anchors_preset = -1
+anchor_left = 0.582
+anchor_top = 0.223
+anchor_right = 0.582
+anchor_bottom = 0.223
+offset_left = -41.8961
+offset_top = -48.0
+offset_right = 41.1039
+offset_bottom = 48.0
+script = ExtResource("2_ir8lh")
+
+[node name="Sprite2D" type="Sprite2D" parent="SpriteButton21"]
+position = Vector2(40, 48)
+texture = ExtResource("23_m6wes")
+
+[node name="SpriteButton22" type="Button" parent="."]
+anchors_preset = -1
+anchor_left = 0.655
+anchor_top = 0.223
+anchor_right = 0.655
+anchor_bottom = 0.223
+offset_left = -41.3361
+offset_top = -48.0
+offset_right = 41.6639
+offset_bottom = 48.0
+script = ExtResource("2_ir8lh")
+
+[node name="Sprite2D" type="Sprite2D" parent="SpriteButton22"]
+position = Vector2(40, 48)
+texture = ExtResource("24_dmf76")
+
+[node name="SpriteButton23" type="Button" parent="."]
+anchors_preset = -1
+anchor_left = 0.726
+anchor_top = 0.223
+anchor_right = 0.726
+anchor_bottom = 0.223
+offset_left = -41.2161
+offset_top = -48.0
+offset_right = 41.7839
+offset_bottom = 48.0
+script = ExtResource("2_ir8lh")
+
+[node name="Sprite2D" type="Sprite2D" parent="SpriteButton23"]
+position = Vector2(40, 48)
+texture = ExtResource("25_xfqr6")
+
+[node name="SpriteButton24" type="Button" parent="."]
+anchors_preset = -1
+anchor_left = 0.801
+anchor_top = 0.223
+anchor_right = 0.801
+anchor_bottom = 0.223
+offset_left = -41.2161
+offset_top = -48.0
+offset_right = 41.7839
+offset_bottom = 48.0
+script = ExtResource("2_ir8lh")
+
+[node name="Sprite2D" type="Sprite2D" parent="SpriteButton24"]
+position = Vector2(40, 48)
+texture = ExtResource("26_v3gkm")
+
+[node name="SpriteButton25" type="Button" parent="."]
+anchors_preset = -1
+anchor_left = 0.875
+anchor_top = 0.223
+anchor_right = 0.875
+anchor_bottom = 0.223
+offset_left = -41.9362
+offset_top = -48.0
+offset_right = 41.0638
+offset_bottom = 48.0
+script = ExtResource("2_ir8lh")
+
+[node name="Sprite2D" type="Sprite2D" parent="SpriteButton25"]
+position = Vector2(40, 48)
+texture = ExtResource("27_5yxci")
+
+[node name="SpriteButton26" type="Button" parent="."]
+anchors_preset = -1
+anchor_left = 0.952
+anchor_top = 0.224
+anchor_right = 0.952
+anchor_bottom = 0.224
+offset_left = -41.4961
+offset_top = -47.72
+offset_right = 41.5039
+offset_bottom = 48.28
+script = ExtResource("2_ir8lh")
+
+[node name="Sprite2D" type="Sprite2D" parent="SpriteButton26"]
+position = Vector2(40, 48)
+texture = ExtResource("28_lp764")
+
+[node name="SpriteButton27" type="Button" parent="."]
+anchors_preset = -1
+anchor_left = 0.041
+anchor_top = 0.362
+anchor_right = 0.041
+anchor_bottom = 0.362
+offset_left = -40.312
+offset_top = -48.224
+offset_right = 40.688
+offset_bottom = 47.776
+script = ExtResource("2_ir8lh")
+
+[node name="Sprite2D" type="Sprite2D" parent="SpriteButton27"]
+position = Vector2(40, 46)
+texture = ExtResource("29_qxpwb")
+
+[node name="SpriteButton28" type="Button" parent="."]
+anchors_preset = -1
+anchor_left = 0.195
+anchor_top = 0.362
+anchor_right = 0.195
+anchor_bottom = 0.362
+offset_left = -41.976
+offset_top = -48.08
+offset_right = 41.024
+offset_bottom = 47.92
+script = ExtResource("2_ir8lh")
+
+[node name="Sprite2D" type="Sprite2D" parent="SpriteButton28"]
+position = Vector2(39, 46)
+texture = ExtResource("30_ku7w1")
+
+[node name="SpriteButton29" type="Button" parent="."]
+anchors_preset = -1
+anchor_left = 0.272
+anchor_top = 0.362
+anchor_right = 0.272
+anchor_bottom = 0.362
+offset_left = -41.936
+offset_top = -48.224
+offset_right = 41.064
+offset_bottom = 47.776
+script = ExtResource("2_ir8lh")
+
+[node name="Sprite2D" type="Sprite2D" parent="SpriteButton29"]
+position = Vector2(40, 46)
+texture = ExtResource("31_yqrdy")
+
+[node name="SpriteButton30" type="Button" parent="."]
+anchors_preset = -1
+anchor_left = 0.116
+anchor_top = 0.362
+anchor_right = 0.116
+anchor_bottom = 0.362
+offset_left = -41.712
+offset_top = -48.08
+offset_right = 41.288
+offset_bottom = 47.92
+script = ExtResource("2_ir8lh")
+
+[node name="Sprite2D" type="Sprite2D" parent="SpriteButton30"]
+position = Vector2(40, 48)
+texture = ExtResource("32_dadra")
+
+[node name="SpriteButton31" type="Button" parent="."]
+anchors_preset = -1
+anchor_left = 0.348
+anchor_top = 0.362
+anchor_right = 0.348
+anchor_bottom = 0.362
+offset_left = -41.36
+offset_top = -48.08
+offset_right = 41.64
+offset_bottom = 47.92
+script = ExtResource("2_ir8lh")
+
+[node name="Sprite2D" type="Sprite2D" parent="SpriteButton31"]
+position = Vector2(40, 48)
+texture = ExtResource("33_srlqr")
+
+[node name="SpriteButton32" type="Button" parent="."]
+anchors_preset = -1
+anchor_left = 0.425
+anchor_top = 0.362
+anchor_right = 0.425
+anchor_bottom = 0.362
+offset_left = -40.936
+offset_top = -48.08
+offset_right = 42.064
+offset_bottom = 47.92
+script = ExtResource("2_ir8lh")
+
+[node name="Sprite2D" type="Sprite2D" parent="SpriteButton32"]
+position = Vector2(40, 48)
+texture = ExtResource("34_rpp8i")
+
+[node name="SpriteButton33" type="Button" parent="."]
+anchors_preset = -1
+anchor_left = 0.506
+anchor_top = 0.362
+anchor_right = 0.506
+anchor_bottom = 0.362
+offset_left = -41.6161
+offset_top = -48.08
+offset_right = 41.3839
+offset_bottom = 47.92
+script = ExtResource("2_ir8lh")
+
+[node name="Sprite2D" type="Sprite2D" parent="SpriteButton33"]
+position = Vector2(40, 48)
+texture = ExtResource("35_ognro")
+flip_h = true
+
+[node name="SpriteButton34" type="Button" parent="."]
+anchors_preset = -1
+anchor_left = 0.582
+anchor_top = 0.362
+anchor_right = 0.582
+anchor_bottom = 0.362
+offset_left = -41.8961
+offset_top = -48.08
+offset_right = 41.1039
+offset_bottom = 47.92
+script = ExtResource("2_ir8lh")
+
+[node name="Sprite2D" type="Sprite2D" parent="SpriteButton34"]
+position = Vector2(40, 48)
+texture = ExtResource("36_81xaw")
+
+[node name="SpriteButton35" type="Button" parent="."]
+anchors_preset = -1
+anchor_left = 0.655
+anchor_top = 0.362
+anchor_right = 0.655
+anchor_bottom = 0.362
+offset_left = -41.3361
+offset_top = -48.08
+offset_right = 41.6639
+offset_bottom = 47.92
+script = ExtResource("2_ir8lh")
+
+[node name="Sprite2D" type="Sprite2D" parent="SpriteButton35"]
+position = Vector2(40, 48)
+texture = ExtResource("37_0tmac")
+
+[node name="SpriteButton36" type="Button" parent="."]
+anchors_preset = -1
+anchor_left = 0.726
+anchor_top = 0.362
+anchor_right = 0.726
+anchor_bottom = 0.362
+offset_left = -41.2161
+offset_top = -48.08
+offset_right = 41.7839
+offset_bottom = 47.92
+script = ExtResource("2_ir8lh")
+
+[node name="Sprite2D" type="Sprite2D" parent="SpriteButton36"]
+position = Vector2(40, 48)
+texture = ExtResource("38_bvpdn")
+
+[node name="SpriteButton37" type="Button" parent="."]
+anchors_preset = -1
+anchor_left = 0.801
+anchor_top = 0.362
+anchor_right = 0.801
+anchor_bottom = 0.362
+offset_left = -41.2161
+offset_top = -48.08
+offset_right = 41.7839
+offset_bottom = 47.92
+script = ExtResource("2_ir8lh")
+
+[node name="Sprite2D" type="Sprite2D" parent="SpriteButton37"]
+position = Vector2(40, 48)
+texture = ExtResource("39_lmp7j")
+
+[node name="SpriteButton38" type="Button" parent="."]
+anchors_preset = -1
+anchor_left = 0.875
+anchor_top = 0.362
+anchor_right = 0.875
+anchor_bottom = 0.362
+offset_left = -41.9362
+offset_top = -48.08
+offset_right = 41.0638
+offset_bottom = 47.92
+script = ExtResource("2_ir8lh")
+
+[node name="Sprite2D" type="Sprite2D" parent="SpriteButton38"]
+position = Vector2(40, 48)
+texture = ExtResource("40_vjocc")
+
+[node name="SpriteButton39" type="Button" parent="."]
+anchors_preset = -1
+anchor_left = 0.952
+anchor_top = 0.363
+anchor_right = 0.952
+anchor_bottom = 0.363
+offset_left = -41.4961
+offset_top = -47.8
+offset_right = 41.5039
+offset_bottom = 48.2
+script = ExtResource("2_ir8lh")
+
+[node name="Sprite2D" type="Sprite2D" parent="SpriteButton39"]
+position = Vector2(40, 48)
+texture = ExtResource("41_du8kg")
+
+[node name="SpriteButton40" type="Button" parent="."]
+anchors_preset = -1
+anchor_left = 0.041
+anchor_top = 0.499
+anchor_right = 0.041
+anchor_bottom = 0.499
+offset_left = -40.312
+offset_top = -47.864
+offset_right = 40.688
+offset_bottom = 48.136
+script = ExtResource("2_ir8lh")
+
+[node name="Sprite2D" type="Sprite2D" parent="SpriteButton40"]
+position = Vector2(40, 46)
+texture = ExtResource("42_vt85g")
+
+[node name="SpriteButton41" type="Button" parent="."]
+anchors_preset = -1
+anchor_left = 0.195
+anchor_top = 0.5
+anchor_right = 0.195
+anchor_bottom = 0.5
+offset_left = -41.976
+offset_top = -48.44
+offset_right = 41.024
+offset_bottom = 47.56
+script = ExtResource("2_ir8lh")
+
+[node name="Sprite2D" type="Sprite2D" parent="SpriteButton41"]
+position = Vector2(39, 46)
+texture = ExtResource("43_v7n3e")
+
+[node name="SpriteButton42" type="Button" parent="."]
+anchors_preset = -1
+anchor_left = 0.272
+anchor_top = 0.499
+anchor_right = 0.272
+anchor_bottom = 0.499
+offset_left = -41.936
+offset_top = -47.864
+offset_right = 41.064
+offset_bottom = 48.136
+script = ExtResource("2_ir8lh")
+
+[node name="Sprite2D" type="Sprite2D" parent="SpriteButton42"]
+position = Vector2(40, 46)
+texture = ExtResource("44_fap52")
+
+[node name="SpriteButton43" type="Button" parent="."]
+anchors_preset = -1
+anchor_left = 0.116
+anchor_top = 0.5
+anchor_right = 0.116
+anchor_bottom = 0.5
+offset_left = -41.712
+offset_top = -48.44
+offset_right = 41.288
+offset_bottom = 47.56
+script = ExtResource("2_ir8lh")
+
+[node name="Sprite2D" type="Sprite2D" parent="SpriteButton43"]
+position = Vector2(40, 48)
+texture = ExtResource("45_1p5qr")
+
+[node name="SpriteButton44" type="Button" parent="."]
+anchors_preset = -1
+anchor_left = 0.348
+anchor_top = 0.499
+anchor_right = 0.348
+anchor_bottom = 0.499
+offset_left = -41.36
+offset_top = -47.72
+offset_right = 41.64
+offset_bottom = 48.28
+script = ExtResource("2_ir8lh")
+
+[node name="Sprite2D" type="Sprite2D" parent="SpriteButton44"]
+position = Vector2(40, 48)
+texture = ExtResource("46_1x7y5")
+
+[node name="SpriteButton45" type="Button" parent="."]
+anchors_preset = -1
+anchor_left = 0.425
+anchor_top = 0.5
+anchor_right = 0.425
+anchor_bottom = 0.5
+offset_left = -40.936
+offset_top = -48.44
+offset_right = 42.064
+offset_bottom = 47.56
+script = ExtResource("2_ir8lh")
+
+[node name="Sprite2D" type="Sprite2D" parent="SpriteButton45"]
+position = Vector2(40, 48)
+texture = ExtResource("47_xkytb")
+
+[node name="SpriteButton46" type="Button" parent="."]
+anchors_preset = -1
+anchor_left = 0.506
+anchor_top = 0.5
+anchor_right = 0.506
+anchor_bottom = 0.5
+offset_left = -41.6161
+offset_top = -48.44
+offset_right = 41.3839
+offset_bottom = 47.56
+script = ExtResource("2_ir8lh")
+
+[node name="Sprite2D" type="Sprite2D" parent="SpriteButton46"]
+position = Vector2(40, 48)
+texture = ExtResource("48_t8t6e")
+
+[node name="SpriteButton47" type="Button" parent="."]
+anchors_preset = -1
+anchor_left = 0.582
+anchor_top = 0.5
+anchor_right = 0.582
+anchor_bottom = 0.5
+offset_left = -41.8961
+offset_top = -48.44
+offset_right = 41.1039
+offset_bottom = 47.56
+script = ExtResource("2_ir8lh")
+
+[node name="Sprite2D" type="Sprite2D" parent="SpriteButton47"]
+position = Vector2(40, 48)
+texture = ExtResource("49_c1ctn")
+
+[node name="SpriteButton48" type="Button" parent="."]
+anchors_preset = -1
+anchor_left = 0.655
+anchor_top = 0.5
+anchor_right = 0.655
+anchor_bottom = 0.5
+offset_left = -41.3361
+offset_top = -48.44
+offset_right = 41.6639
+offset_bottom = 47.56
+script = ExtResource("2_ir8lh")
+
+[node name="Sprite2D" type="Sprite2D" parent="SpriteButton48"]
+position = Vector2(40, 48)
+texture = ExtResource("50_o7cvr")
+
+[node name="SpriteButton49" type="Button" parent="."]
+anchors_preset = -1
+anchor_left = 0.726
+anchor_top = 0.5
+anchor_right = 0.726
+anchor_bottom = 0.5
+offset_left = -41.2161
+offset_top = -48.44
+offset_right = 41.7839
+offset_bottom = 47.56
+script = ExtResource("2_ir8lh")
+
+[node name="Sprite2D" type="Sprite2D" parent="SpriteButton49"]
+position = Vector2(40, 48)
+texture = ExtResource("51_k75dq")
+
+[node name="SpriteButton50" type="Button" parent="."]
+anchors_preset = -1
+anchor_left = 0.801
+anchor_top = 0.499
+anchor_right = 0.801
+anchor_bottom = 0.499
+offset_left = -41.2161
+offset_top = -47.72
+offset_right = 41.7839
+offset_bottom = 48.28
+script = ExtResource("2_ir8lh")
+
+[node name="Sprite2D" type="Sprite2D" parent="SpriteButton50"]
+position = Vector2(40, 48)
+texture = ExtResource("52_mchfn")
+
+[node name="SpriteButton51" type="Button" parent="."]
+anchors_preset = -1
+anchor_left = 0.875
+anchor_top = 0.5
+anchor_right = 0.875
+anchor_bottom = 0.5
+offset_left = -41.9362
+offset_top = -48.44
+offset_right = 41.0638
+offset_bottom = 47.56
+script = ExtResource("2_ir8lh")
+
+[node name="Sprite2D" type="Sprite2D" parent="SpriteButton51"]
+position = Vector2(40, 48)
+texture = ExtResource("53_wcp6s")
+
+[node name="SpriteButton52" type="Button" parent="."]
+anchors_preset = -1
+anchor_left = 0.952
+anchor_top = 0.5
+anchor_right = 0.952
+anchor_bottom = 0.5
+offset_left = -41.4961
+offset_top = -47.44
+offset_right = 41.5039
+offset_bottom = 48.56
+script = ExtResource("2_ir8lh")
+
+[node name="Sprite2D" type="Sprite2D" parent="SpriteButton52"]
+position = Vector2(40, 48)
+texture = ExtResource("54_dbdri")
+
+[node name="SpriteButton53" type="Button" parent="."]
+anchors_preset = -1
+anchor_left = 0.041
+anchor_top = 0.634
+anchor_right = 0.041
+anchor_bottom = 0.634
+offset_left = -40.312
+offset_top = -48.0641
+offset_right = 40.688
+offset_bottom = 47.9359
+script = ExtResource("2_ir8lh")
+
+[node name="Sprite2D" type="Sprite2D" parent="SpriteButton53"]
+position = Vector2(40, 46)
+texture = ExtResource("55_qjlen")
+
+[node name="SpriteButton54" type="Button" parent="."]
+anchors_preset = -1
+anchor_left = 0.195
+anchor_top = 0.634
+anchor_right = 0.195
+anchor_bottom = 0.634
+offset_left = -41.976
+offset_top = -47.92
+offset_right = 41.024
+offset_bottom = 48.08
+script = ExtResource("2_ir8lh")
+
+[node name="Sprite2D" type="Sprite2D" parent="SpriteButton54"]
+position = Vector2(39, 46)
+texture = ExtResource("56_07e75")
+
+[node name="SpriteButton55" type="Button" parent="."]
+anchors_preset = -1
+anchor_left = 0.272
+anchor_top = 0.634
+anchor_right = 0.272
+anchor_bottom = 0.634
+offset_left = -41.936
+offset_top = -48.0641
+offset_right = 41.064
+offset_bottom = 47.9359
+script = ExtResource("2_ir8lh")
+
+[node name="Sprite2D" type="Sprite2D" parent="SpriteButton55"]
+position = Vector2(40, 46)
+texture = ExtResource("57_c3n6f")
+
+[node name="SpriteButton56" type="Button" parent="."]
+anchors_preset = -1
+anchor_left = 0.116
+anchor_top = 0.634
+anchor_right = 0.116
+anchor_bottom = 0.634
+offset_left = -41.712
+offset_top = -47.92
+offset_right = 41.288
+offset_bottom = 48.08
+script = ExtResource("2_ir8lh")
+
+[node name="Sprite2D" type="Sprite2D" parent="SpriteButton56"]
+position = Vector2(40, 48)
+texture = ExtResource("58_vvyrd")
+
+[node name="SpriteButton57" type="Button" parent="."]
+anchors_preset = -1
+anchor_left = 0.348
+anchor_top = 0.634
+anchor_right = 0.348
+anchor_bottom = 0.634
+offset_left = -41.36
+offset_top = -47.92
+offset_right = 41.64
+offset_bottom = 48.08
+script = ExtResource("2_ir8lh")
+
+[node name="Sprite2D" type="Sprite2D" parent="SpriteButton57"]
+position = Vector2(40, 48)
+texture = ExtResource("59_wapbg")
+
+[node name="SpriteButton58" type="Button" parent="."]
+anchors_preset = -1
+anchor_left = 0.425
+anchor_top = 0.634
+anchor_right = 0.425
+anchor_bottom = 0.634
+offset_left = -40.936
+offset_top = -47.92
+offset_right = 42.064
+offset_bottom = 48.08
+script = ExtResource("2_ir8lh")
+
+[node name="Sprite2D" type="Sprite2D" parent="SpriteButton58"]
+position = Vector2(40, 48)
+texture = ExtResource("60_hw50k")
+
+[node name="SpriteButton59" type="Button" parent="."]
+anchors_preset = -1
+anchor_left = 0.506
+anchor_top = 0.634
+anchor_right = 0.506
+anchor_bottom = 0.634
+offset_left = -41.6161
+offset_top = -47.92
+offset_right = 41.3839
+offset_bottom = 48.08
+script = ExtResource("2_ir8lh")
+
+[node name="Sprite2D" type="Sprite2D" parent="SpriteButton59"]
+position = Vector2(40, 48)
+texture = ExtResource("61_1dh2f")
+
+[node name="SpriteButton60" type="Button" parent="."]
+anchors_preset = -1
+anchor_left = 0.582
+anchor_top = 0.634
+anchor_right = 0.582
+anchor_bottom = 0.634
+offset_left = -41.8961
+offset_top = -47.92
+offset_right = 41.1039
+offset_bottom = 48.08
+script = ExtResource("2_ir8lh")
+
+[node name="Sprite2D" type="Sprite2D" parent="SpriteButton60"]
+position = Vector2(40, 48)
+texture = ExtResource("62_bt73i")
+
+[node name="SpriteButton61" type="Button" parent="."]
+anchors_preset = -1
+anchor_left = 0.655
+anchor_top = 0.634
+anchor_right = 0.655
+anchor_bottom = 0.634
+offset_left = -41.3361
+offset_top = -47.92
+offset_right = 41.6639
+offset_bottom = 48.08
+script = ExtResource("2_ir8lh")
+
+[node name="Sprite2D" type="Sprite2D" parent="SpriteButton61"]
+position = Vector2(40, 48)
+texture = ExtResource("63_e6gug")
+
+[node name="SpriteButton62" type="Button" parent="."]
+anchors_preset = -1
+anchor_left = 0.726
+anchor_top = 0.634
+anchor_right = 0.726
+anchor_bottom = 0.634
+offset_left = -41.2161
+offset_top = -47.92
+offset_right = 41.7839
+offset_bottom = 48.08
+script = ExtResource("2_ir8lh")
+
+[node name="Sprite2D" type="Sprite2D" parent="SpriteButton62"]
+position = Vector2(40, 48)
+texture = ExtResource("64_eexsa")
+
+[node name="SpriteButton63" type="Button" parent="."]
+anchors_preset = -1
+anchor_left = 0.801
+anchor_top = 0.634
+anchor_right = 0.801
+anchor_bottom = 0.634
+offset_left = -41.2161
+offset_top = -47.92
+offset_right = 41.7839
+offset_bottom = 48.08
+script = ExtResource("2_ir8lh")
+
+[node name="Sprite2D" type="Sprite2D" parent="SpriteButton63"]
+position = Vector2(40, 48)
+texture = ExtResource("65_s212a")
+
+[node name="SpriteButton64" type="Button" parent="."]
+anchors_preset = -1
+anchor_left = 0.875
+anchor_top = 0.634
+anchor_right = 0.875
+anchor_bottom = 0.634
+offset_left = -41.9362
+offset_top = -47.92
+offset_right = 41.0638
+offset_bottom = 48.08
+script = ExtResource("2_ir8lh")
+
+[node name="Sprite2D" type="Sprite2D" parent="SpriteButton64"]
+position = Vector2(40, 48)
+texture = ExtResource("66_u18lr")
+
+[node name="SpriteButton65" type="Button" parent="."]
+anchors_preset = -1
+anchor_left = 0.952
+anchor_top = 0.635
+anchor_right = 0.952
+anchor_bottom = 0.635
+offset_left = -41.4961
+offset_top = -47.64
+offset_right = 41.5039
+offset_bottom = 48.36
+script = ExtResource("2_ir8lh")
+
+[node name="Sprite2D" type="Sprite2D" parent="SpriteButton65"]
+position = Vector2(40, 48)
+texture = ExtResource("67_b2eoe")
+
+[node name="SpriteButton66" type="Button" parent="."]
+anchors_preset = -1
+anchor_left = 0.041
+anchor_top = 0.769
+anchor_right = 0.041
+anchor_bottom = 0.769
+offset_left = -40.312
+offset_top = -48.2641
+offset_right = 40.688
+offset_bottom = 47.736
+script = ExtResource("2_ir8lh")
+
+[node name="Sprite2D" type="Sprite2D" parent="SpriteButton66"]
+position = Vector2(40, 46)
+texture = ExtResource("5_8txcw")
+
+[node name="SpriteButton67" type="Button" parent="."]
+anchors_preset = -1
+anchor_left = 0.195
+anchor_top = 0.769
+anchor_right = 0.195
+anchor_bottom = 0.769
+offset_left = -41.976
+offset_top = -48.1201
+offset_right = 41.024
+offset_bottom = 47.88
+script = ExtResource("2_ir8lh")
+
+[node name="Sprite2D" type="Sprite2D" parent="SpriteButton67"]
+position = Vector2(39, 46)
+texture = ExtResource("69_krtqf")
+
+[node name="SpriteButton68" type="Button" parent="."]
+anchors_preset = -1
+anchor_left = 0.272
+anchor_top = 0.769
+anchor_right = 0.272
+anchor_bottom = 0.769
+offset_left = -41.936
+offset_top = -48.2641
+offset_right = 41.064
+offset_bottom = 47.736
+script = ExtResource("2_ir8lh")
+
+[node name="Sprite2D" type="Sprite2D" parent="SpriteButton68"]
+position = Vector2(40, 46)
+texture = ExtResource("70_snxa3")
+
+[node name="SpriteButton69" type="Button" parent="."]
+anchors_preset = -1
+anchor_left = 0.116
+anchor_top = 0.769
+anchor_right = 0.116
+anchor_bottom = 0.769
+offset_left = -41.712
+offset_top = -48.1201
+offset_right = 41.288
+offset_bottom = 47.88
+script = ExtResource("2_ir8lh")
+
+[node name="Sprite2D" type="Sprite2D" parent="SpriteButton69"]
+position = Vector2(40, 48)
+texture = ExtResource("71_ryedq")
+
+[node name="SpriteButton70" type="Button" parent="."]
+anchors_preset = -1
+anchor_left = 0.348
+anchor_top = 0.769
+anchor_right = 0.348
+anchor_bottom = 0.769
+offset_left = -41.36
+offset_top = -48.1201
+offset_right = 41.64
+offset_bottom = 47.88
+script = ExtResource("2_ir8lh")
+
+[node name="Sprite2D" type="Sprite2D" parent="SpriteButton70"]
+position = Vector2(40, 48)
+texture = ExtResource("72_e2qug")
+
+[node name="SpriteButton71" type="Button" parent="."]
+anchors_preset = -1
+anchor_left = 0.425
+anchor_top = 0.769
+anchor_right = 0.425
+anchor_bottom = 0.769
+offset_left = -40.936
+offset_top = -48.1201
+offset_right = 42.064
+offset_bottom = 47.88
+script = ExtResource("2_ir8lh")
+
+[node name="Sprite2D" type="Sprite2D" parent="SpriteButton71"]
+position = Vector2(40, 48)
+texture = ExtResource("73_y5uv1")
+
+[node name="SpriteButton72" type="Button" parent="."]
+anchors_preset = -1
+anchor_left = 0.506
+anchor_top = 0.769
+anchor_right = 0.506
+anchor_bottom = 0.769
+offset_left = -41.6161
+offset_top = -48.1201
+offset_right = 41.3839
+offset_bottom = 47.88
+script = ExtResource("2_ir8lh")
+
+[node name="Sprite2D" type="Sprite2D" parent="SpriteButton72"]
+position = Vector2(40, 48)
+texture = ExtResource("74_jjdrt")
+
+[node name="SpriteButton73" type="Button" parent="."]
+anchors_preset = -1
+anchor_left = 0.582
+anchor_top = 0.769
+anchor_right = 0.582
+anchor_bottom = 0.769
+offset_left = -41.8961
+offset_top = -48.1201
+offset_right = 41.1039
+offset_bottom = 47.88
+script = ExtResource("2_ir8lh")
+
+[node name="Sprite2D" type="Sprite2D" parent="SpriteButton73"]
+position = Vector2(40, 48)
+texture = ExtResource("75_c4yag")
+
+[node name="SpriteButton79" type="Button" parent="."]
+anchors_preset = -1
+anchor_left = 0.041
+anchor_top = 0.909
+anchor_right = 0.041
+anchor_bottom = 0.909
+offset_left = -40.312
+offset_top = -48.064
+offset_right = 40.688
+offset_bottom = 47.936
+script = ExtResource("2_ir8lh")
+
+[node name="Sprite2D" type="Sprite2D" parent="SpriteButton79"]
+position = Vector2(40, 46)
+texture = ExtResource("76_lypbs")
+
+[node name="SpriteButton82" type="Button" parent="."]
+anchors_preset = -1
+anchor_left = 0.116
+anchor_top = 0.909
+anchor_right = 0.116
+anchor_bottom = 0.909
+offset_left = -41.712
+offset_top = -47.9201
+offset_right = 41.288
+offset_bottom = 48.08
+script = ExtResource("2_ir8lh")
+
+[node name="Sprite2D" type="Sprite2D" parent="SpriteButton82"]
+position = Vector2(40, 48)
+texture = ExtResource("77_pfexk")
+
+[node name="SpriteButton74" type="Button" parent="."]
+anchors_preset = -1
+anchor_left = 0.655
+anchor_top = 0.769
+anchor_right = 0.655
+anchor_bottom = 0.769
+offset_left = -41.3361
+offset_top = -48.1201
+offset_right = 41.6639
+offset_bottom = 47.88
+script = ExtResource("2_ir8lh")
+
+[node name="Sprite2D" type="Sprite2D" parent="SpriteButton74"]
+position = Vector2(40, 48)
+texture = ExtResource("78_lor7q")
+
+[node name="SpriteButton75" type="Button" parent="."]
+anchors_preset = -1
+anchor_left = 0.726
+anchor_top = 0.769
+anchor_right = 0.726
+anchor_bottom = 0.769
+offset_left = -41.2161
+offset_top = -48.1201
+offset_right = 41.7839
+offset_bottom = 47.88
+script = ExtResource("2_ir8lh")
+
+[node name="Sprite2D" type="Sprite2D" parent="SpriteButton75"]
+position = Vector2(40, 48)
+texture = ExtResource("79_g8p5o")
+
+[node name="SpriteButton76" type="Button" parent="."]
+anchors_preset = -1
+anchor_left = 0.801
+anchor_top = 0.769
+anchor_right = 0.801
+anchor_bottom = 0.769
+offset_left = -41.2161
+offset_top = -48.1201
+offset_right = 41.7839
+offset_bottom = 47.88
+script = ExtResource("2_ir8lh")
+
+[node name="Sprite2D" type="Sprite2D" parent="SpriteButton76"]
+position = Vector2(40, 48)
+texture = ExtResource("80_cc0sk")
+
+[node name="SpriteButton77" type="Button" parent="."]
+anchors_preset = -1
+anchor_left = 0.875
+anchor_top = 0.769
+anchor_right = 0.875
+anchor_bottom = 0.769
+offset_left = -41.9362
+offset_top = -48.1201
+offset_right = 41.0638
+offset_bottom = 47.88
+script = ExtResource("2_ir8lh")
+
+[node name="Sprite2D" type="Sprite2D" parent="SpriteButton77"]
+position = Vector2(40, 48)
+texture = ExtResource("81_awvtc")
+
+[node name="ReadyButton" type="Button" parent="."]
+anchors_preset = -1
+anchor_left = 0.811
+anchor_top = 0.924
+anchor_right = 0.811
+anchor_bottom = 0.924
+offset_left = -49.08
+offset_top = -20.28
+offset_right = 49.9199
+offset_bottom = 19.72
+text = "Ready"
+
+[node name="LineEdit" type="LineEdit" parent="."]
+anchors_preset = -1
+anchor_left = 0.71
+anchor_top = 0.92
+anchor_right = 0.71
+anchor_bottom = 0.92
+offset_left = -67.8001
+offset_top = -17.4
+offset_right = 67.1999
+offset_bottom = 17.6
+placeholder_text = "Player Name"
+
+[node name="SmashButton" type="Button" parent="."]
+anchors_preset = -1
+anchor_left = 0.933
+anchor_top = 0.928
+anchor_right = 0.933
+anchor_bottom = 0.928
+offset_left = -76.24
+offset_top = -47.16
+offset_right = 75.76
+offset_bottom = 46.84
+theme_override_font_sizes/font_size = 40
+text = "SMASH"
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.01
+autostart = true
+
+[connection signal="mouse_entered" from="SpriteButton" to="SpriteButton" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="SpriteButton" to="SpriteButton" method="_on_mouse_exited"]
+[connection signal="pressed" from="SpriteButton" to="SpriteButton" method="_on_pressed"]
+[connection signal="mouse_entered" from="SpriteButton2" to="SpriteButton2" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="SpriteButton2" to="SpriteButton2" method="_on_mouse_exited"]
+[connection signal="pressed" from="SpriteButton2" to="SpriteButton2" method="_on_pressed"]
+[connection signal="mouse_entered" from="SpriteButton3" to="SpriteButton3" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="SpriteButton3" to="SpriteButton3" method="_on_mouse_exited"]
+[connection signal="pressed" from="SpriteButton3" to="SpriteButton3" method="_on_pressed"]
+[connection signal="mouse_entered" from="SpriteButton4" to="SpriteButton4" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="SpriteButton4" to="SpriteButton4" method="_on_mouse_exited"]
+[connection signal="pressed" from="SpriteButton4" to="SpriteButton4" method="_on_pressed"]
+[connection signal="mouse_entered" from="SpriteButton5" to="SpriteButton5" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="SpriteButton5" to="SpriteButton5" method="_on_mouse_exited"]
+[connection signal="pressed" from="SpriteButton5" to="SpriteButton5" method="_on_pressed"]
+[connection signal="mouse_entered" from="SpriteButton6" to="SpriteButton6" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="SpriteButton6" to="SpriteButton6" method="_on_mouse_exited"]
+[connection signal="pressed" from="SpriteButton6" to="SpriteButton6" method="_on_pressed"]
+[connection signal="mouse_entered" from="SpriteButton7" to="SpriteButton7" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="SpriteButton7" to="SpriteButton7" method="_on_mouse_exited"]
+[connection signal="pressed" from="SpriteButton7" to="SpriteButton7" method="_on_pressed"]
+[connection signal="mouse_entered" from="SpriteButton8" to="SpriteButton8" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="SpriteButton8" to="SpriteButton8" method="_on_mouse_exited"]
+[connection signal="pressed" from="SpriteButton8" to="SpriteButton8" method="_on_pressed"]
+[connection signal="mouse_entered" from="SpriteButton9" to="SpriteButton9" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="SpriteButton9" to="SpriteButton9" method="_on_mouse_exited"]
+[connection signal="pressed" from="SpriteButton9" to="SpriteButton9" method="_on_pressed"]
+[connection signal="mouse_entered" from="SpriteButton10" to="SpriteButton10" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="SpriteButton10" to="SpriteButton10" method="_on_mouse_exited"]
+[connection signal="pressed" from="SpriteButton10" to="SpriteButton10" method="_on_pressed"]
+[connection signal="mouse_entered" from="SpriteButton11" to="SpriteButton11" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="SpriteButton11" to="SpriteButton11" method="_on_mouse_exited"]
+[connection signal="pressed" from="SpriteButton11" to="SpriteButton11" method="_on_pressed"]
+[connection signal="mouse_entered" from="SpriteButton12" to="SpriteButton12" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="SpriteButton12" to="SpriteButton12" method="_on_mouse_exited"]
+[connection signal="pressed" from="SpriteButton12" to="SpriteButton12" method="_on_pressed"]
+[connection signal="mouse_entered" from="SpriteButton13" to="SpriteButton13" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="SpriteButton13" to="SpriteButton13" method="_on_mouse_exited"]
+[connection signal="pressed" from="SpriteButton13" to="SpriteButton13" method="_on_pressed"]
+[connection signal="mouse_entered" from="SpriteButton14" to="SpriteButton14" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="SpriteButton14" to="SpriteButton14" method="_on_mouse_exited"]
+[connection signal="pressed" from="SpriteButton14" to="SpriteButton14" method="_on_pressed"]
+[connection signal="mouse_entered" from="SpriteButton15" to="SpriteButton15" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="SpriteButton15" to="SpriteButton15" method="_on_mouse_exited"]
+[connection signal="pressed" from="SpriteButton15" to="SpriteButton15" method="_on_pressed"]
+[connection signal="mouse_entered" from="SpriteButton16" to="SpriteButton16" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="SpriteButton16" to="SpriteButton16" method="_on_mouse_exited"]
+[connection signal="pressed" from="SpriteButton16" to="SpriteButton16" method="_on_pressed"]
+[connection signal="mouse_entered" from="SpriteButton17" to="SpriteButton17" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="SpriteButton17" to="SpriteButton17" method="_on_mouse_exited"]
+[connection signal="pressed" from="SpriteButton17" to="SpriteButton17" method="_on_pressed"]
+[connection signal="mouse_entered" from="SpriteButton18" to="SpriteButton18" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="SpriteButton18" to="SpriteButton18" method="_on_mouse_exited"]
+[connection signal="pressed" from="SpriteButton18" to="SpriteButton18" method="_on_pressed"]
+[connection signal="mouse_entered" from="SpriteButton19" to="SpriteButton19" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="SpriteButton19" to="SpriteButton19" method="_on_mouse_exited"]
+[connection signal="pressed" from="SpriteButton19" to="SpriteButton19" method="_on_pressed"]
+[connection signal="mouse_entered" from="SpriteButton20" to="SpriteButton20" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="SpriteButton20" to="SpriteButton20" method="_on_mouse_exited"]
+[connection signal="pressed" from="SpriteButton20" to="SpriteButton20" method="_on_pressed"]
+[connection signal="mouse_entered" from="SpriteButton21" to="SpriteButton21" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="SpriteButton21" to="SpriteButton21" method="_on_mouse_exited"]
+[connection signal="pressed" from="SpriteButton21" to="SpriteButton21" method="_on_pressed"]
+[connection signal="mouse_entered" from="SpriteButton22" to="SpriteButton22" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="SpriteButton22" to="SpriteButton22" method="_on_mouse_exited"]
+[connection signal="pressed" from="SpriteButton22" to="SpriteButton22" method="_on_pressed"]
+[connection signal="mouse_entered" from="SpriteButton23" to="SpriteButton23" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="SpriteButton23" to="SpriteButton23" method="_on_mouse_exited"]
+[connection signal="pressed" from="SpriteButton23" to="SpriteButton23" method="_on_pressed"]
+[connection signal="mouse_entered" from="SpriteButton24" to="SpriteButton24" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="SpriteButton24" to="SpriteButton24" method="_on_mouse_exited"]
+[connection signal="pressed" from="SpriteButton24" to="SpriteButton24" method="_on_pressed"]
+[connection signal="mouse_entered" from="SpriteButton25" to="SpriteButton25" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="SpriteButton25" to="SpriteButton25" method="_on_mouse_exited"]
+[connection signal="pressed" from="SpriteButton25" to="SpriteButton25" method="_on_pressed"]
+[connection signal="mouse_entered" from="SpriteButton26" to="SpriteButton26" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="SpriteButton26" to="SpriteButton26" method="_on_mouse_exited"]
+[connection signal="pressed" from="SpriteButton26" to="SpriteButton26" method="_on_pressed"]
+[connection signal="mouse_entered" from="SpriteButton27" to="SpriteButton27" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="SpriteButton27" to="SpriteButton27" method="_on_mouse_exited"]
+[connection signal="pressed" from="SpriteButton27" to="SpriteButton27" method="_on_pressed"]
+[connection signal="mouse_entered" from="SpriteButton28" to="SpriteButton28" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="SpriteButton28" to="SpriteButton28" method="_on_mouse_exited"]
+[connection signal="pressed" from="SpriteButton28" to="SpriteButton28" method="_on_pressed"]
+[connection signal="mouse_entered" from="SpriteButton29" to="SpriteButton29" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="SpriteButton29" to="SpriteButton29" method="_on_mouse_exited"]
+[connection signal="pressed" from="SpriteButton29" to="SpriteButton29" method="_on_pressed"]
+[connection signal="mouse_entered" from="SpriteButton30" to="SpriteButton30" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="SpriteButton30" to="SpriteButton30" method="_on_mouse_exited"]
+[connection signal="pressed" from="SpriteButton30" to="SpriteButton30" method="_on_pressed"]
+[connection signal="mouse_entered" from="SpriteButton31" to="SpriteButton31" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="SpriteButton31" to="SpriteButton31" method="_on_mouse_exited"]
+[connection signal="pressed" from="SpriteButton31" to="SpriteButton31" method="_on_pressed"]
+[connection signal="mouse_entered" from="SpriteButton32" to="SpriteButton32" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="SpriteButton32" to="SpriteButton32" method="_on_mouse_exited"]
+[connection signal="pressed" from="SpriteButton32" to="SpriteButton32" method="_on_pressed"]
+[connection signal="mouse_entered" from="SpriteButton33" to="SpriteButton33" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="SpriteButton33" to="SpriteButton33" method="_on_mouse_exited"]
+[connection signal="pressed" from="SpriteButton33" to="SpriteButton33" method="_on_pressed"]
+[connection signal="mouse_entered" from="SpriteButton34" to="SpriteButton34" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="SpriteButton34" to="SpriteButton34" method="_on_mouse_exited"]
+[connection signal="pressed" from="SpriteButton34" to="SpriteButton34" method="_on_pressed"]
+[connection signal="mouse_entered" from="SpriteButton35" to="SpriteButton35" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="SpriteButton35" to="SpriteButton35" method="_on_mouse_exited"]
+[connection signal="pressed" from="SpriteButton35" to="SpriteButton35" method="_on_pressed"]
+[connection signal="mouse_entered" from="SpriteButton36" to="SpriteButton36" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="SpriteButton36" to="SpriteButton36" method="_on_mouse_exited"]
+[connection signal="pressed" from="SpriteButton36" to="SpriteButton36" method="_on_pressed"]
+[connection signal="mouse_entered" from="SpriteButton37" to="SpriteButton37" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="SpriteButton37" to="SpriteButton37" method="_on_mouse_exited"]
+[connection signal="pressed" from="SpriteButton37" to="SpriteButton37" method="_on_pressed"]
+[connection signal="mouse_entered" from="SpriteButton38" to="SpriteButton38" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="SpriteButton38" to="SpriteButton38" method="_on_mouse_exited"]
+[connection signal="pressed" from="SpriteButton38" to="SpriteButton38" method="_on_pressed"]
+[connection signal="mouse_entered" from="SpriteButton39" to="SpriteButton39" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="SpriteButton39" to="SpriteButton39" method="_on_mouse_exited"]
+[connection signal="pressed" from="SpriteButton39" to="SpriteButton39" method="_on_pressed"]
+[connection signal="mouse_entered" from="SpriteButton40" to="SpriteButton40" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="SpriteButton40" to="SpriteButton40" method="_on_mouse_exited"]
+[connection signal="pressed" from="SpriteButton40" to="SpriteButton40" method="_on_pressed"]
+[connection signal="mouse_entered" from="SpriteButton41" to="SpriteButton41" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="SpriteButton41" to="SpriteButton41" method="_on_mouse_exited"]
+[connection signal="pressed" from="SpriteButton41" to="SpriteButton41" method="_on_pressed"]
+[connection signal="mouse_entered" from="SpriteButton42" to="SpriteButton42" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="SpriteButton42" to="SpriteButton42" method="_on_mouse_exited"]
+[connection signal="pressed" from="SpriteButton42" to="SpriteButton42" method="_on_pressed"]
+[connection signal="mouse_entered" from="SpriteButton43" to="SpriteButton43" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="SpriteButton43" to="SpriteButton43" method="_on_mouse_exited"]
+[connection signal="pressed" from="SpriteButton43" to="SpriteButton43" method="_on_pressed"]
+[connection signal="mouse_entered" from="SpriteButton44" to="SpriteButton44" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="SpriteButton44" to="SpriteButton44" method="_on_mouse_exited"]
+[connection signal="pressed" from="SpriteButton44" to="SpriteButton44" method="_on_pressed"]
+[connection signal="mouse_entered" from="SpriteButton45" to="SpriteButton45" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="SpriteButton45" to="SpriteButton45" method="_on_mouse_exited"]
+[connection signal="pressed" from="SpriteButton45" to="SpriteButton45" method="_on_pressed"]
+[connection signal="mouse_entered" from="SpriteButton46" to="SpriteButton46" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="SpriteButton46" to="SpriteButton46" method="_on_mouse_exited"]
+[connection signal="pressed" from="SpriteButton46" to="SpriteButton46" method="_on_pressed"]
+[connection signal="mouse_entered" from="SpriteButton47" to="SpriteButton47" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="SpriteButton47" to="SpriteButton47" method="_on_mouse_exited"]
+[connection signal="pressed" from="SpriteButton47" to="SpriteButton47" method="_on_pressed"]
+[connection signal="mouse_entered" from="SpriteButton48" to="SpriteButton48" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="SpriteButton48" to="SpriteButton48" method="_on_mouse_exited"]
+[connection signal="pressed" from="SpriteButton48" to="SpriteButton48" method="_on_pressed"]
+[connection signal="mouse_entered" from="SpriteButton49" to="SpriteButton49" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="SpriteButton49" to="SpriteButton49" method="_on_mouse_exited"]
+[connection signal="pressed" from="SpriteButton49" to="SpriteButton49" method="_on_pressed"]
+[connection signal="mouse_entered" from="SpriteButton50" to="SpriteButton50" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="SpriteButton50" to="SpriteButton50" method="_on_mouse_exited"]
+[connection signal="pressed" from="SpriteButton50" to="SpriteButton50" method="_on_pressed"]
+[connection signal="mouse_entered" from="SpriteButton51" to="SpriteButton51" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="SpriteButton51" to="SpriteButton51" method="_on_mouse_exited"]
+[connection signal="pressed" from="SpriteButton51" to="SpriteButton51" method="_on_pressed"]
+[connection signal="mouse_entered" from="SpriteButton52" to="SpriteButton52" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="SpriteButton52" to="SpriteButton52" method="_on_mouse_exited"]
+[connection signal="pressed" from="SpriteButton52" to="SpriteButton52" method="_on_pressed"]
+[connection signal="mouse_entered" from="SpriteButton53" to="SpriteButton53" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="SpriteButton53" to="SpriteButton53" method="_on_mouse_exited"]
+[connection signal="pressed" from="SpriteButton53" to="SpriteButton53" method="_on_pressed"]
+[connection signal="mouse_entered" from="SpriteButton54" to="SpriteButton54" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="SpriteButton54" to="SpriteButton54" method="_on_mouse_exited"]
+[connection signal="pressed" from="SpriteButton54" to="SpriteButton54" method="_on_pressed"]
+[connection signal="mouse_entered" from="SpriteButton55" to="SpriteButton55" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="SpriteButton55" to="SpriteButton55" method="_on_mouse_exited"]
+[connection signal="pressed" from="SpriteButton55" to="SpriteButton55" method="_on_pressed"]
+[connection signal="mouse_entered" from="SpriteButton56" to="SpriteButton56" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="SpriteButton56" to="SpriteButton56" method="_on_mouse_exited"]
+[connection signal="pressed" from="SpriteButton56" to="SpriteButton56" method="_on_pressed"]
+[connection signal="mouse_entered" from="SpriteButton57" to="SpriteButton57" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="SpriteButton57" to="SpriteButton57" method="_on_mouse_exited"]
+[connection signal="pressed" from="SpriteButton57" to="SpriteButton57" method="_on_pressed"]
+[connection signal="mouse_entered" from="SpriteButton58" to="SpriteButton58" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="SpriteButton58" to="SpriteButton58" method="_on_mouse_exited"]
+[connection signal="pressed" from="SpriteButton58" to="SpriteButton58" method="_on_pressed"]
+[connection signal="mouse_entered" from="SpriteButton59" to="SpriteButton59" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="SpriteButton59" to="SpriteButton59" method="_on_mouse_exited"]
+[connection signal="pressed" from="SpriteButton59" to="SpriteButton59" method="_on_pressed"]
+[connection signal="mouse_entered" from="SpriteButton60" to="SpriteButton60" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="SpriteButton60" to="SpriteButton60" method="_on_mouse_exited"]
+[connection signal="pressed" from="SpriteButton60" to="SpriteButton60" method="_on_pressed"]
+[connection signal="mouse_entered" from="SpriteButton61" to="SpriteButton61" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="SpriteButton61" to="SpriteButton61" method="_on_mouse_exited"]
+[connection signal="pressed" from="SpriteButton61" to="SpriteButton61" method="_on_pressed"]
+[connection signal="mouse_entered" from="SpriteButton62" to="SpriteButton62" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="SpriteButton62" to="SpriteButton62" method="_on_mouse_exited"]
+[connection signal="pressed" from="SpriteButton62" to="SpriteButton62" method="_on_pressed"]
+[connection signal="mouse_entered" from="SpriteButton63" to="SpriteButton63" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="SpriteButton63" to="SpriteButton63" method="_on_mouse_exited"]
+[connection signal="pressed" from="SpriteButton63" to="SpriteButton63" method="_on_pressed"]
+[connection signal="mouse_entered" from="SpriteButton64" to="SpriteButton64" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="SpriteButton64" to="SpriteButton64" method="_on_mouse_exited"]
+[connection signal="pressed" from="SpriteButton64" to="SpriteButton64" method="_on_pressed"]
+[connection signal="mouse_entered" from="SpriteButton65" to="SpriteButton65" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="SpriteButton65" to="SpriteButton65" method="_on_mouse_exited"]
+[connection signal="pressed" from="SpriteButton65" to="SpriteButton65" method="_on_pressed"]
+[connection signal="mouse_entered" from="SpriteButton66" to="SpriteButton66" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="SpriteButton66" to="SpriteButton66" method="_on_mouse_exited"]
+[connection signal="pressed" from="SpriteButton66" to="SpriteButton66" method="_on_pressed"]
+[connection signal="mouse_entered" from="SpriteButton67" to="SpriteButton67" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="SpriteButton67" to="SpriteButton67" method="_on_mouse_exited"]
+[connection signal="pressed" from="SpriteButton67" to="SpriteButton67" method="_on_pressed"]
+[connection signal="mouse_entered" from="SpriteButton68" to="SpriteButton68" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="SpriteButton68" to="SpriteButton68" method="_on_mouse_exited"]
+[connection signal="pressed" from="SpriteButton68" to="SpriteButton68" method="_on_pressed"]
+[connection signal="mouse_entered" from="SpriteButton69" to="SpriteButton69" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="SpriteButton69" to="SpriteButton69" method="_on_mouse_exited"]
+[connection signal="pressed" from="SpriteButton69" to="SpriteButton69" method="_on_pressed"]
+[connection signal="mouse_entered" from="SpriteButton70" to="SpriteButton70" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="SpriteButton70" to="SpriteButton70" method="_on_mouse_exited"]
+[connection signal="pressed" from="SpriteButton70" to="SpriteButton70" method="_on_pressed"]
+[connection signal="mouse_entered" from="SpriteButton71" to="SpriteButton71" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="SpriteButton71" to="SpriteButton71" method="_on_mouse_exited"]
+[connection signal="pressed" from="SpriteButton71" to="SpriteButton71" method="_on_pressed"]
+[connection signal="mouse_entered" from="SpriteButton72" to="SpriteButton72" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="SpriteButton72" to="SpriteButton72" method="_on_mouse_exited"]
+[connection signal="pressed" from="SpriteButton72" to="SpriteButton72" method="_on_pressed"]
+[connection signal="mouse_entered" from="SpriteButton73" to="SpriteButton73" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="SpriteButton73" to="SpriteButton73" method="_on_mouse_exited"]
+[connection signal="pressed" from="SpriteButton73" to="SpriteButton73" method="_on_pressed"]
+[connection signal="mouse_entered" from="SpriteButton79" to="SpriteButton79" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="SpriteButton79" to="SpriteButton79" method="_on_mouse_exited"]
+[connection signal="pressed" from="SpriteButton79" to="SpriteButton79" method="_on_pressed"]
+[connection signal="mouse_entered" from="SpriteButton82" to="SpriteButton82" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="SpriteButton82" to="SpriteButton82" method="_on_mouse_exited"]
+[connection signal="pressed" from="SpriteButton82" to="SpriteButton82" method="_on_pressed"]
+[connection signal="mouse_entered" from="SpriteButton74" to="SpriteButton74" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="SpriteButton74" to="SpriteButton74" method="_on_mouse_exited"]
+[connection signal="pressed" from="SpriteButton74" to="SpriteButton74" method="_on_pressed"]
+[connection signal="mouse_entered" from="SpriteButton75" to="SpriteButton75" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="SpriteButton75" to="SpriteButton75" method="_on_mouse_exited"]
+[connection signal="pressed" from="SpriteButton75" to="SpriteButton75" method="_on_pressed"]
+[connection signal="mouse_entered" from="SpriteButton76" to="SpriteButton76" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="SpriteButton76" to="SpriteButton76" method="_on_mouse_exited"]
+[connection signal="pressed" from="SpriteButton76" to="SpriteButton76" method="_on_pressed"]
+[connection signal="mouse_entered" from="SpriteButton77" to="SpriteButton77" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="SpriteButton77" to="SpriteButton77" method="_on_mouse_exited"]
+[connection signal="pressed" from="SpriteButton77" to="SpriteButton77" method="_on_pressed"]
+[connection signal="pressed" from="ReadyButton" to="." method="_on_button_pressed"]
+[connection signal="text_changed" from="LineEdit" to="." method="_on_line_edit_text_changed"]
+[connection signal="pressed" from="SmashButton" to="." method="_on_smash_button_pressed"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
