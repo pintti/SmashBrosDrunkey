@@ -29,7 +29,7 @@ func _on_button_pressed():
 		players[playerName] = {"sprite": chosenSprite.texture.resource_path}
 		chosenNodes.append(chosenNode)
 		print(players)
-		chosenNode._on_char_selected()
+		chosenNode._on_char_selected(playerName)
 		chosenNode = null
 		chosenSprite = null
 

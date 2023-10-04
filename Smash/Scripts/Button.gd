@@ -33,6 +33,9 @@ func _on_mouse_exited():
 		$Sprite2D.modulate = colorNormal
 
 
-func _on_char_selected():
+func _on_char_selected(name):
 	$Sprite2D.modulate = colorChosen
 	chosen = true
+	var playerName = Label.new()
+	playerName.text = name
+	add_child(playerName)
