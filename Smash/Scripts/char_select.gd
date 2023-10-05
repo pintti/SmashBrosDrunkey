@@ -18,7 +18,7 @@ func _ready():
 	$SpriteButton79/Sprite2D.modulate = Color(0.1, 0.1, 0.1)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
+func _process(_delta):
 	$ColorRect.color = Color8(red, green, blue, 100)
 
 
