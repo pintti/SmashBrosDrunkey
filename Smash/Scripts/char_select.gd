@@ -63,9 +63,9 @@ func _on_timer_timeout():
 
 
 func _on_line_edit_text_changed(new_text):
-	if new_text != "Joensuu":
+	if new_text != "joensuu":
 		$SpriteButton82.chosen = true
-	elif "Joensuu" not in players:
+	elif "joensuu" not in players:
 		$SpriteButton82.chosen = false
 		$SpriteButton82/Sprite2D.modulate = Color(1, 1, 1)
 	if new_text != "Jaajo":

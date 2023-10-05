@@ -22,11 +22,11 @@ var Player
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	Player = load("res://Player.gd")
+	Player = load("res://Scripts/Player.gd")
 	for player in testPlayers:
 		var newPlayer = Player.new()
 		newPlayer.playerName = player
-		newPlayer.texture = load(testPlayers[player]["sprite"])
+		newPlayer.add_texture(testPlayers[player]["sprite"])
 		players.append(newPlayer)
 	shuffle_players(players)
 	_get_player_positions()
@@ -41,10 +41,10 @@ func _ready():
 func _process(_delta):
 	pass
 
+
 func _assign_player_start_pos():
-	for i in len(positions):
-		players[i].position = positions[i].position
-		
+	for i in len(players):
+		players[i].move(positions[i].position)
 
 
 func shuffle_players(playerNames):
