@@ -31,11 +31,12 @@ func _ready():
 	shuffle_players(players)
 	_get_player_positions()
 	_assign_player_start_pos()
-	_print_all_players()
 	
 	for player in players:
 		add_child(player)
 		player._add_name()
+		
+	$PlayerPanel.fill_panel(players)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta):
@@ -64,6 +65,40 @@ func _get_player_positions():
 func _print_all_players():
 	for player in players:
 		_print_player(player)
+	print()
 
 func _print_player(player):
-	print(player.playerName, " Wins ", player.wins, " Pos ", player.pos, " Streak ", player.streak, " Loss ", player.losses, " ", "Vector2 ", player.position)
+	print(player.playerName, " Wins ", player.wins, " Pos ", player.pos, " Streak ", player.streak, " Played ", player.played)
+
+
+func winner_move(number):
+	_print_all_players()
+	var playerCopy = []
+	for i in len(players):
+		if players[i].pos == 4:
+			players[i].pos = number
+		elif players[i].pos < len(players)+1 and players[i].pos > 4:
+			players[i].pos -= 1
+		elif players[i].pos < 4:
+			players[i].played += 1
+			if players[i].pos != number:
+				players[i].streak += 1
+			else:
+				players[i].wins += 1
+				players[i].pos = len(players)-1
+		
+
+	for i in len(players):
+		players[i].move(positions[players[i].pos].position)
+	$PlayerPanel.update_standings(players)
+	_print_all_players()
+
+
+func _on_button_pressed():
+	winner_move(0)
+func _on_button_2_pressed():
+	winner_move(1)
+func _on_button_3_pressed():
+	winner_move(2)
+func _on_button_4_pressed():
+	winner_move(3)

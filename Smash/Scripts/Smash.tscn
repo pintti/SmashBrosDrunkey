@@ -1,6 +1,8 @@
-[gd_scene load_steps=2 format=3 uid="uid://dex5xrj8xlju4"]
+[gd_scene load_steps=4 format=3 uid="uid://dex5xrj8xlju4"]
 
 [ext_resource type="Script" path="res://Scripts/Smash.gd" id="1_byf4q"]
+[ext_resource type="Script" path="res://Scripts/PlayerStatus.gd" id="2_72vh3"]
+[ext_resource type="Script" path="res://Scripts/HBoxSizer.gd" id="2_yjq0y"]
 
 [node name="Smash" type="Node"]
 script = ExtResource("1_byf4q")
@@ -9,113 +11,142 @@ script = ExtResource("1_byf4q")
 
 [node name="Pos1" type="Control" parent="playerPositions"]
 layout_mode = 3
-anchor_left = 0.742
+anchor_left = 0.156
 anchor_top = 0.139
-anchor_right = 0.742
+anchor_right = 0.156
 anchor_bottom = 0.139
-offset_left = 0.239929
+offset_left = 0.319992
 offset_top = -0.0800095
-offset_right = 0.239929
+offset_right = 0.319992
 offset_bottom = -0.0800095
+
+[node name="Button" type="Button" parent="playerPositions/Pos1"]
+layout_mode = 1
+anchors_preset = -1
+offset_left = -50.0
+offset_top = -50.0
+offset_right = 50.0
+offset_bottom = 50.0
 
 [node name="Pos2" type="Control" parent="playerPositions"]
 layout_mode = 3
-anchor_left = 0.586
+anchor_left = 0.289
 anchor_top = 0.139
-anchor_right = 0.586
+anchor_right = 0.289
 anchor_bottom = 0.139
-offset_left = -0.0800171
+offset_left = 0.0799866
 offset_top = -0.0800095
-offset_right = -0.0800171
+offset_right = 0.0799866
 offset_bottom = -0.0800095
+
+[node name="Button2" type="Button" parent="playerPositions/Pos2"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.118
+anchor_bottom = 0.908
+offset_left = -50.0
+offset_top = -50.0
+offset_right = 50.0
+offset_bottom = 50.0
 
 [node name="Pos3" type="Control" parent="playerPositions"]
 layout_mode = 3
-anchor_left = 0.43
+anchor_left = 0.414
 anchor_top = 0.139
-anchor_right = 0.43
+anchor_right = 0.414
 anchor_bottom = 0.139
-offset_left = -0.400024
+offset_left = 0.0799561
 offset_top = -0.0800095
-offset_right = -0.400024
+offset_right = 0.0799561
 offset_bottom = -0.0800095
+
+[node name="Button3" type="Button" parent="playerPositions/Pos3"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.118
+anchor_bottom = 0.908
+offset_left = -50.0
+offset_top = -50.0
+offset_right = 50.0
+offset_bottom = 50.0
 
 [node name="Pos4" type="Control" parent="playerPositions"]
 layout_mode = 3
-anchor_left = 0.273
+anchor_left = 0.547
 anchor_top = 0.139
-anchor_right = 0.273
+anchor_right = 0.547
 anchor_bottom = 0.139
-offset_left = 0.559998
+offset_left = -0.160034
 offset_top = -0.0800095
-offset_right = 0.559998
+offset_right = -0.160034
 offset_bottom = -0.0800095
+
+[node name="Button4" type="Button" parent="playerPositions/Pos4"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.118
+anchor_bottom = 0.908
+offset_left = -50.0
+offset_top = -50.0
+offset_right = 50.0
+offset_bottom = 50.0
 
 [node name="Pos5" type="Control" parent="playerPositions"]
 layout_mode = 3
-anchor_left = 0.126
-anchor_top = 0.31
-anchor_right = 0.126
-anchor_bottom = 0.31
-offset_left = -0.279999
-offset_top = -0.199997
-offset_right = -0.279999
-offset_bottom = -0.199997
+anchor_left = 0.117
+anchor_top = 0.347
+anchor_right = 0.117
+anchor_bottom = 0.347
+offset_left = 0.23999
+offset_top = 0.160004
+offset_right = 0.23999
+offset_bottom = 0.160004
 
 [node name="Pos6" type="Control" parent="playerPositions"]
 layout_mode = 3
-anchor_left = 0.273
+anchor_left = 0.234
 anchor_top = 0.417
-anchor_right = 0.273
+anchor_right = 0.234
 anchor_bottom = 0.417
-offset_left = 0.559998
+offset_left = 0.47998
 offset_top = -0.240021
-offset_right = 0.559998
+offset_right = 0.47998
 offset_bottom = -0.240021
 
 [node name="Pos7" type="Control" parent="playerPositions"]
 layout_mode = 3
-anchor_left = 0.469
+anchor_left = 0.352
 anchor_top = 0.417
-anchor_right = 0.469
+anchor_right = 0.352
 anchor_bottom = 0.417
-offset_left = -0.320007
+offset_left = -0.560028
 offset_top = -0.240021
-offset_right = -0.320007
+offset_right = -0.560028
 offset_bottom = -0.240021
 
 [node name="Pos8" type="Control" parent="playerPositions"]
 layout_mode = 3
-anchor_left = 0.664
+anchor_left = 0.469
 anchor_top = 0.417
-anchor_right = 0.664
+anchor_right = 0.469
 anchor_bottom = 0.417
-offset_left = 0.0799561
+offset_left = -0.320007
 offset_top = -0.240021
-offset_right = 0.0799561
+offset_right = -0.320007
 offset_bottom = -0.240021
 
 [node name="Pos9" type="Control" parent="playerPositions"]
 layout_mode = 3
-anchor_left = 0.859
+anchor_left = 0.586
 anchor_top = 0.521
-anchor_right = 0.859
+anchor_right = 0.586
 anchor_bottom = 0.521
-offset_left = 0.47998
+offset_left = -0.0800171
 offset_top = -0.120026
-offset_right = 0.47998
+offset_right = -0.0800171
 offset_bottom = -0.120026
 
 [node name="Pos10" type="Control" parent="playerPositions"]
-layout_mode = 3
-anchor_left = 0.664
-anchor_top = 0.625
-anchor_right = 0.664
-anchor_bottom = 0.625
-offset_left = 0.0799561
-offset_right = 0.0799561
-
-[node name="Pos11" type="Control" parent="playerPositions"]
 layout_mode = 3
 anchor_left = 0.469
 anchor_top = 0.625
@@ -124,14 +155,23 @@ anchor_bottom = 0.625
 offset_left = -0.320007
 offset_right = -0.320007
 
+[node name="Pos11" type="Control" parent="playerPositions"]
+layout_mode = 3
+anchor_left = 0.352
+anchor_top = 0.625
+anchor_right = 0.352
+anchor_bottom = 0.625
+offset_left = -0.560028
+offset_right = -0.560028
+
 [node name="Pos12" type="Control" parent="playerPositions"]
 layout_mode = 3
-anchor_left = 0.273
+anchor_left = 0.234
 anchor_top = 0.625
-anchor_right = 0.273
+anchor_right = 0.234
 anchor_bottom = 0.625
-offset_left = 0.559998
-offset_right = 0.559998
+offset_left = 0.47998
+offset_right = 0.47998
 
 [node name="Pos13" type="Control" parent="playerPositions"]
 layout_mode = 3
@@ -141,3 +181,742 @@ anchor_right = 0.078
 anchor_bottom = 0.625
 offset_left = 0.159996
 offset_right = 0.159996
+
+[node name="PlayerPanel" type="VBoxContainer" parent="."]
+custom_minimum_size = Vector2(100, 100)
+anchors_preset = -1
+anchor_left = 0.703
+anchor_right = 1.0
+anchor_bottom = 0.999
+offset_left = 0.159973
+offset_bottom = 0.719971
+theme_override_constants/separation = 0
+script = ExtResource("2_72vh3")
+
+[node name="ColorRect" type="ColorRect" parent="PlayerPanel"]
+layout_mode = 2
+size_flags_vertical = 3
+color = Color(0.8, 0, 0.2, 1)
+
+[node name="HBoxContainer" type="HBoxContainer" parent="PlayerPanel/ColorRect"]
+layout_mode = 0
+offset_right = 378.0
+offset_bottom = 362.0
+theme_override_constants/separation = 0
+script = ExtResource("2_yjq0y")
+
+[node name="Label" type="Label" parent="PlayerPanel/ColorRect/HBoxContainer"]
+custom_minimum_size = Vector2(40, 0)
+layout_mode = 2
+size_flags_vertical = 1
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="PlayerPanel/ColorRect/HBoxContainer"]
+custom_minimum_size = Vector2(160, 0)
+layout_mode = 2
+size_flags_vertical = 1
+text = "Name"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label3" type="Label" parent="PlayerPanel/ColorRect/HBoxContainer"]
+custom_minimum_size = Vector2(60, 0)
+layout_mode = 2
+size_flags_vertical = 1
+text = "Wins"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label4" type="Label" parent="PlayerPanel/ColorRect/HBoxContainer"]
+custom_minimum_size = Vector2(60, 0)
+layout_mode = 2
+size_flags_vertical = 1
+text = "Streak"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label5" type="Label" parent="PlayerPanel/ColorRect/HBoxContainer"]
+custom_minimum_size = Vector2(60, 0)
+layout_mode = 2
+size_flags_vertical = 1
+text = "Played"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ColorRect2" type="ColorRect" parent="PlayerPanel"]
+layout_mode = 2
+size_flags_vertical = 3
+color = Color(1, 0.6, 0, 1)
+
+[node name="HBoxContainer" type="HBoxContainer" parent="PlayerPanel/ColorRect2"]
+layout_mode = 0
+offset_right = 378.0
+offset_bottom = 362.0
+theme_override_constants/separation = 0
+script = ExtResource("2_yjq0y")
+
+[node name="Label" type="Label" parent="PlayerPanel/ColorRect2/HBoxContainer"]
+custom_minimum_size = Vector2(40, 0)
+layout_mode = 2
+size_flags_vertical = 1
+text = "1"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="PlayerPanel/ColorRect2/HBoxContainer"]
+custom_minimum_size = Vector2(160, 0)
+layout_mode = 2
+size_flags_vertical = 1
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label3" type="Label" parent="PlayerPanel/ColorRect2/HBoxContainer"]
+custom_minimum_size = Vector2(60, 0)
+layout_mode = 2
+size_flags_vertical = 1
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label4" type="Label" parent="PlayerPanel/ColorRect2/HBoxContainer"]
+custom_minimum_size = Vector2(60, 0)
+layout_mode = 2
+size_flags_vertical = 1
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label5" type="Label" parent="PlayerPanel/ColorRect2/HBoxContainer"]
+custom_minimum_size = Vector2(60, 0)
+layout_mode = 2
+size_flags_vertical = 1
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ColorRect3" type="ColorRect" parent="PlayerPanel"]
+layout_mode = 2
+size_flags_vertical = 3
+color = Color(0.8, 0, 0.2, 1)
+
+[node name="HBoxContainer" type="HBoxContainer" parent="PlayerPanel/ColorRect3"]
+layout_mode = 0
+offset_right = 378.0
+offset_bottom = 362.0
+theme_override_constants/separation = 0
+script = ExtResource("2_yjq0y")
+
+[node name="Label" type="Label" parent="PlayerPanel/ColorRect3/HBoxContainer"]
+custom_minimum_size = Vector2(40, 0)
+layout_mode = 2
+size_flags_vertical = 1
+text = "2"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="PlayerPanel/ColorRect3/HBoxContainer"]
+custom_minimum_size = Vector2(160, 0)
+layout_mode = 2
+size_flags_vertical = 1
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label3" type="Label" parent="PlayerPanel/ColorRect3/HBoxContainer"]
+custom_minimum_size = Vector2(60, 0)
+layout_mode = 2
+size_flags_vertical = 1
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label4" type="Label" parent="PlayerPanel/ColorRect3/HBoxContainer"]
+custom_minimum_size = Vector2(60, 0)
+layout_mode = 2
+size_flags_vertical = 1
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label5" type="Label" parent="PlayerPanel/ColorRect3/HBoxContainer"]
+custom_minimum_size = Vector2(60, 0)
+layout_mode = 2
+size_flags_vertical = 1
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ColorRect4" type="ColorRect" parent="PlayerPanel"]
+layout_mode = 2
+size_flags_vertical = 3
+color = Color(1, 0.6, 0, 1)
+
+[node name="HBoxContainer" type="HBoxContainer" parent="PlayerPanel/ColorRect4"]
+layout_mode = 0
+offset_right = 378.0
+offset_bottom = 362.0
+theme_override_constants/separation = 0
+script = ExtResource("2_yjq0y")
+
+[node name="Label" type="Label" parent="PlayerPanel/ColorRect4/HBoxContainer"]
+custom_minimum_size = Vector2(40, 0)
+layout_mode = 2
+size_flags_vertical = 1
+text = "3"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="PlayerPanel/ColorRect4/HBoxContainer"]
+custom_minimum_size = Vector2(160, 0)
+layout_mode = 2
+size_flags_vertical = 1
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label3" type="Label" parent="PlayerPanel/ColorRect4/HBoxContainer"]
+custom_minimum_size = Vector2(60, 0)
+layout_mode = 2
+size_flags_vertical = 1
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label4" type="Label" parent="PlayerPanel/ColorRect4/HBoxContainer"]
+custom_minimum_size = Vector2(60, 0)
+layout_mode = 2
+size_flags_vertical = 1
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label5" type="Label" parent="PlayerPanel/ColorRect4/HBoxContainer"]
+custom_minimum_size = Vector2(60, 0)
+layout_mode = 2
+size_flags_vertical = 1
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ColorRect5" type="ColorRect" parent="PlayerPanel"]
+layout_mode = 2
+size_flags_vertical = 3
+color = Color(0.8, 0, 0.2, 1)
+
+[node name="HBoxContainer" type="HBoxContainer" parent="PlayerPanel/ColorRect5"]
+layout_mode = 0
+offset_right = 378.0
+offset_bottom = 362.0
+theme_override_constants/separation = 0
+script = ExtResource("2_yjq0y")
+
+[node name="Label" type="Label" parent="PlayerPanel/ColorRect5/HBoxContainer"]
+custom_minimum_size = Vector2(40, 0)
+layout_mode = 2
+size_flags_vertical = 1
+text = "4"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="PlayerPanel/ColorRect5/HBoxContainer"]
+custom_minimum_size = Vector2(160, 0)
+layout_mode = 2
+size_flags_vertical = 1
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label3" type="Label" parent="PlayerPanel/ColorRect5/HBoxContainer"]
+custom_minimum_size = Vector2(60, 0)
+layout_mode = 2
+size_flags_vertical = 1
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label4" type="Label" parent="PlayerPanel/ColorRect5/HBoxContainer"]
+custom_minimum_size = Vector2(60, 0)
+layout_mode = 2
+size_flags_vertical = 1
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label5" type="Label" parent="PlayerPanel/ColorRect5/HBoxContainer"]
+custom_minimum_size = Vector2(60, 0)
+layout_mode = 2
+size_flags_vertical = 1
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ColorRect6" type="ColorRect" parent="PlayerPanel"]
+layout_mode = 2
+size_flags_vertical = 3
+color = Color(1, 0.6, 0, 1)
+
+[node name="HBoxContainer" type="HBoxContainer" parent="PlayerPanel/ColorRect6"]
+layout_mode = 0
+offset_right = 378.0
+offset_bottom = 362.0
+theme_override_constants/separation = 0
+script = ExtResource("2_yjq0y")
+
+[node name="Label" type="Label" parent="PlayerPanel/ColorRect6/HBoxContainer"]
+custom_minimum_size = Vector2(40, 0)
+layout_mode = 2
+size_flags_vertical = 1
+text = "5"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="PlayerPanel/ColorRect6/HBoxContainer"]
+custom_minimum_size = Vector2(160, 0)
+layout_mode = 2
+size_flags_vertical = 1
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label3" type="Label" parent="PlayerPanel/ColorRect6/HBoxContainer"]
+custom_minimum_size = Vector2(60, 0)
+layout_mode = 2
+size_flags_vertical = 1
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label4" type="Label" parent="PlayerPanel/ColorRect6/HBoxContainer"]
+custom_minimum_size = Vector2(60, 0)
+layout_mode = 2
+size_flags_vertical = 1
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label5" type="Label" parent="PlayerPanel/ColorRect6/HBoxContainer"]
+custom_minimum_size = Vector2(60, 0)
+layout_mode = 2
+size_flags_vertical = 1
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ColorRect7" type="ColorRect" parent="PlayerPanel"]
+layout_mode = 2
+size_flags_vertical = 3
+color = Color(0.8, 0, 0.2, 1)
+
+[node name="HBoxContainer" type="HBoxContainer" parent="PlayerPanel/ColorRect7"]
+layout_mode = 0
+offset_right = 378.0
+offset_bottom = 362.0
+theme_override_constants/separation = 0
+script = ExtResource("2_yjq0y")
+
+[node name="Label" type="Label" parent="PlayerPanel/ColorRect7/HBoxContainer"]
+custom_minimum_size = Vector2(40, 0)
+layout_mode = 2
+size_flags_vertical = 1
+text = "6"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="PlayerPanel/ColorRect7/HBoxContainer"]
+custom_minimum_size = Vector2(160, 0)
+layout_mode = 2
+size_flags_vertical = 1
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label3" type="Label" parent="PlayerPanel/ColorRect7/HBoxContainer"]
+custom_minimum_size = Vector2(60, 0)
+layout_mode = 2
+size_flags_vertical = 1
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label4" type="Label" parent="PlayerPanel/ColorRect7/HBoxContainer"]
+custom_minimum_size = Vector2(60, 0)
+layout_mode = 2
+size_flags_vertical = 1
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label5" type="Label" parent="PlayerPanel/ColorRect7/HBoxContainer"]
+custom_minimum_size = Vector2(60, 0)
+layout_mode = 2
+size_flags_vertical = 1
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ColorRect8" type="ColorRect" parent="PlayerPanel"]
+layout_mode = 2
+size_flags_vertical = 3
+color = Color(1, 0.6, 0, 1)
+
+[node name="HBoxContainer" type="HBoxContainer" parent="PlayerPanel/ColorRect8"]
+layout_mode = 0
+offset_right = 378.0
+offset_bottom = 362.0
+theme_override_constants/separation = 0
+script = ExtResource("2_yjq0y")
+
+[node name="Label" type="Label" parent="PlayerPanel/ColorRect8/HBoxContainer"]
+custom_minimum_size = Vector2(40, 0)
+layout_mode = 2
+size_flags_vertical = 1
+text = "7"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="PlayerPanel/ColorRect8/HBoxContainer"]
+custom_minimum_size = Vector2(160, 0)
+layout_mode = 2
+size_flags_vertical = 1
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label3" type="Label" parent="PlayerPanel/ColorRect8/HBoxContainer"]
+custom_minimum_size = Vector2(60, 0)
+layout_mode = 2
+size_flags_vertical = 1
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label4" type="Label" parent="PlayerPanel/ColorRect8/HBoxContainer"]
+custom_minimum_size = Vector2(60, 0)
+layout_mode = 2
+size_flags_vertical = 1
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label5" type="Label" parent="PlayerPanel/ColorRect8/HBoxContainer"]
+custom_minimum_size = Vector2(60, 0)
+layout_mode = 2
+size_flags_vertical = 1
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ColorRect9" type="ColorRect" parent="PlayerPanel"]
+layout_mode = 2
+size_flags_vertical = 3
+color = Color(0.8, 0, 0.2, 1)
+
+[node name="HBoxContainer" type="HBoxContainer" parent="PlayerPanel/ColorRect9"]
+layout_mode = 0
+offset_right = 378.0
+offset_bottom = 362.0
+theme_override_constants/separation = 0
+script = ExtResource("2_yjq0y")
+
+[node name="Label" type="Label" parent="PlayerPanel/ColorRect9/HBoxContainer"]
+custom_minimum_size = Vector2(40, 0)
+layout_mode = 2
+size_flags_vertical = 1
+text = "8"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="PlayerPanel/ColorRect9/HBoxContainer"]
+custom_minimum_size = Vector2(160, 0)
+layout_mode = 2
+size_flags_vertical = 1
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label3" type="Label" parent="PlayerPanel/ColorRect9/HBoxContainer"]
+custom_minimum_size = Vector2(60, 0)
+layout_mode = 2
+size_flags_vertical = 1
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label4" type="Label" parent="PlayerPanel/ColorRect9/HBoxContainer"]
+custom_minimum_size = Vector2(60, 0)
+layout_mode = 2
+size_flags_vertical = 1
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label5" type="Label" parent="PlayerPanel/ColorRect9/HBoxContainer"]
+custom_minimum_size = Vector2(60, 0)
+layout_mode = 2
+size_flags_vertical = 1
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ColorRect10" type="ColorRect" parent="PlayerPanel"]
+layout_mode = 2
+size_flags_vertical = 3
+color = Color(1, 0.6, 0, 1)
+
+[node name="HBoxContainer" type="HBoxContainer" parent="PlayerPanel/ColorRect10"]
+layout_mode = 0
+offset_right = 378.0
+offset_bottom = 362.0
+theme_override_constants/separation = 0
+script = ExtResource("2_yjq0y")
+
+[node name="Label" type="Label" parent="PlayerPanel/ColorRect10/HBoxContainer"]
+custom_minimum_size = Vector2(40, 0)
+layout_mode = 2
+size_flags_vertical = 1
+text = "9"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="PlayerPanel/ColorRect10/HBoxContainer"]
+custom_minimum_size = Vector2(160, 0)
+layout_mode = 2
+size_flags_vertical = 1
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label3" type="Label" parent="PlayerPanel/ColorRect10/HBoxContainer"]
+custom_minimum_size = Vector2(60, 0)
+layout_mode = 2
+size_flags_vertical = 1
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label4" type="Label" parent="PlayerPanel/ColorRect10/HBoxContainer"]
+custom_minimum_size = Vector2(60, 0)
+layout_mode = 2
+size_flags_vertical = 1
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label5" type="Label" parent="PlayerPanel/ColorRect10/HBoxContainer"]
+custom_minimum_size = Vector2(60, 0)
+layout_mode = 2
+size_flags_vertical = 1
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ColorRect11" type="ColorRect" parent="PlayerPanel"]
+layout_mode = 2
+size_flags_vertical = 3
+color = Color(0.8, 0, 0.2, 1)
+
+[node name="HBoxContainer" type="HBoxContainer" parent="PlayerPanel/ColorRect11"]
+layout_mode = 0
+offset_right = 378.0
+offset_bottom = 362.0
+theme_override_constants/separation = 0
+script = ExtResource("2_yjq0y")
+
+[node name="Label" type="Label" parent="PlayerPanel/ColorRect11/HBoxContainer"]
+custom_minimum_size = Vector2(40, 0)
+layout_mode = 2
+size_flags_vertical = 1
+text = "10"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="PlayerPanel/ColorRect11/HBoxContainer"]
+custom_minimum_size = Vector2(160, 0)
+layout_mode = 2
+size_flags_vertical = 1
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label3" type="Label" parent="PlayerPanel/ColorRect11/HBoxContainer"]
+custom_minimum_size = Vector2(60, 0)
+layout_mode = 2
+size_flags_vertical = 1
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label4" type="Label" parent="PlayerPanel/ColorRect11/HBoxContainer"]
+custom_minimum_size = Vector2(60, 0)
+layout_mode = 2
+size_flags_vertical = 1
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label5" type="Label" parent="PlayerPanel/ColorRect11/HBoxContainer"]
+custom_minimum_size = Vector2(60, 0)
+layout_mode = 2
+size_flags_vertical = 1
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ColorRect12" type="ColorRect" parent="PlayerPanel"]
+layout_mode = 2
+size_flags_vertical = 3
+color = Color(1, 0.6, 0, 1)
+
+[node name="HBoxContainer" type="HBoxContainer" parent="PlayerPanel/ColorRect12"]
+layout_mode = 0
+offset_right = 378.0
+offset_bottom = 362.0
+theme_override_constants/separation = 0
+script = ExtResource("2_yjq0y")
+
+[node name="Label" type="Label" parent="PlayerPanel/ColorRect12/HBoxContainer"]
+custom_minimum_size = Vector2(40, 0)
+layout_mode = 2
+size_flags_vertical = 1
+text = "11"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="PlayerPanel/ColorRect12/HBoxContainer"]
+custom_minimum_size = Vector2(160, 0)
+layout_mode = 2
+size_flags_vertical = 1
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label3" type="Label" parent="PlayerPanel/ColorRect12/HBoxContainer"]
+custom_minimum_size = Vector2(60, 0)
+layout_mode = 2
+size_flags_vertical = 1
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label4" type="Label" parent="PlayerPanel/ColorRect12/HBoxContainer"]
+custom_minimum_size = Vector2(60, 0)
+layout_mode = 2
+size_flags_vertical = 1
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label5" type="Label" parent="PlayerPanel/ColorRect12/HBoxContainer"]
+custom_minimum_size = Vector2(60, 0)
+layout_mode = 2
+size_flags_vertical = 1
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ColorRect13" type="ColorRect" parent="PlayerPanel"]
+layout_mode = 2
+size_flags_vertical = 3
+color = Color(0.8, 0, 0.2, 1)
+
+[node name="HBoxContainer" type="HBoxContainer" parent="PlayerPanel/ColorRect13"]
+layout_mode = 0
+offset_right = 378.0
+offset_bottom = 362.0
+theme_override_constants/separation = 0
+script = ExtResource("2_yjq0y")
+
+[node name="Label" type="Label" parent="PlayerPanel/ColorRect13/HBoxContainer"]
+custom_minimum_size = Vector2(40, 0)
+layout_mode = 2
+size_flags_vertical = 1
+text = "12"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="PlayerPanel/ColorRect13/HBoxContainer"]
+custom_minimum_size = Vector2(160, 0)
+layout_mode = 2
+size_flags_vertical = 1
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label3" type="Label" parent="PlayerPanel/ColorRect13/HBoxContainer"]
+custom_minimum_size = Vector2(60, 0)
+layout_mode = 2
+size_flags_vertical = 1
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label4" type="Label" parent="PlayerPanel/ColorRect13/HBoxContainer"]
+custom_minimum_size = Vector2(60, 0)
+layout_mode = 2
+size_flags_vertical = 1
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label5" type="Label" parent="PlayerPanel/ColorRect13/HBoxContainer"]
+custom_minimum_size = Vector2(60, 0)
+layout_mode = 2
+size_flags_vertical = 1
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ColorRect14" type="ColorRect" parent="PlayerPanel"]
+layout_mode = 2
+size_flags_vertical = 3
+color = Color(1, 0.6, 0, 1)
+
+[node name="HBoxContainer" type="HBoxContainer" parent="PlayerPanel/ColorRect14"]
+layout_mode = 0
+offset_right = 378.0
+offset_bottom = 362.0
+theme_override_constants/separation = 0
+script = ExtResource("2_yjq0y")
+
+[node name="Label" type="Label" parent="PlayerPanel/ColorRect14/HBoxContainer"]
+custom_minimum_size = Vector2(40, 0)
+layout_mode = 2
+size_flags_vertical = 1
+text = "13"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="PlayerPanel/ColorRect14/HBoxContainer"]
+custom_minimum_size = Vector2(160, 0)
+layout_mode = 2
+size_flags_vertical = 1
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label3" type="Label" parent="PlayerPanel/ColorRect14/HBoxContainer"]
+custom_minimum_size = Vector2(60, 0)
+layout_mode = 2
+size_flags_vertical = 1
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label4" type="Label" parent="PlayerPanel/ColorRect14/HBoxContainer"]
+custom_minimum_size = Vector2(60, 0)
+layout_mode = 2
+size_flags_vertical = 1
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label5" type="Label" parent="PlayerPanel/ColorRect14/HBoxContainer"]
+custom_minimum_size = Vector2(60, 0)
+layout_mode = 2
+size_flags_vertical = 1
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ColorRect15" type="ColorRect" parent="PlayerPanel"]
+layout_mode = 2
+size_flags_vertical = 3
+color = Color(0.8, 0, 0.2, 1)
+
+[node name="HBoxContainer" type="HBoxContainer" parent="PlayerPanel/ColorRect15"]
+layout_mode = 0
+offset_right = 378.0
+offset_bottom = 362.0
+theme_override_constants/separation = 0
+script = ExtResource("2_yjq0y")
+
+[node name="Label" type="Label" parent="PlayerPanel/ColorRect15/HBoxContainer"]
+custom_minimum_size = Vector2(40, 0)
+layout_mode = 2
+size_flags_vertical = 1
+text = "14"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="PlayerPanel/ColorRect15/HBoxContainer"]
+custom_minimum_size = Vector2(160, 0)
+layout_mode = 2
+size_flags_vertical = 1
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label3" type="Label" parent="PlayerPanel/ColorRect15/HBoxContainer"]
+custom_minimum_size = Vector2(60, 0)
+layout_mode = 2
+size_flags_vertical = 1
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label4" type="Label" parent="PlayerPanel/ColorRect15/HBoxContainer"]
+custom_minimum_size = Vector2(60, 0)
+layout_mode = 2
+size_flags_vertical = 1
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label5" type="Label" parent="PlayerPanel/ColorRect15/HBoxContainer"]
+custom_minimum_size = Vector2(60, 0)
+layout_mode = 2
+size_flags_vertical = 1
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="playerPositions/Pos1/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="playerPositions/Pos2/Button2" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="playerPositions/Pos3/Button3" to="." method="_on_button_3_pressed"]
+[connection signal="pressed" from="playerPositions/Pos4/Button4" to="." method="_on_button_4_pressed"]
