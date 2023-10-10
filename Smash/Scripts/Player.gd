@@ -15,6 +15,7 @@ var dnf = false
 var playerName
 var charSize
 var playerSprite
+var playerBoxColor
 
 func _ready():
 	add_to_group("players")

@@ -72,8 +72,6 @@ func _print_player(player):
 
 
 func winner_move(number):
-	_print_all_players()
-	var playerCopy = []
 	for i in len(players):
 		if players[i].pos == 4:
 			players[i].pos = number
@@ -86,12 +84,11 @@ func winner_move(number):
 			else:
 				players[i].wins += 1
 				players[i].pos = len(players)-1
-		
+				players[i].streak = 0
 
 	for i in len(players):
-		players[i].move(positions[players[i].pos].position)
+		players[i].move(positions[players[i].pos].position) # I will not ask for forgiveness
 	$PlayerPanel.update_standings(players)
-	_print_all_players()
 
 
 func _on_button_pressed():

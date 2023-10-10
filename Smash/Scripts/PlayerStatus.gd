@@ -2,6 +2,8 @@ extends VBoxContainer
 
 var boxes = []
 var cont_size
+var noob_rect
+var noob_rect_color
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -14,23 +16,56 @@ func _process(delta):
 
 
 func fill_panel(players):
+	var boxCopy = []
 	for i in len(boxes):
 		if i < len(players):
-			boxes[i].get_child(0).update_content(players[i])
+			#players[i].playerBoxColor = boxes[i].color
+			fill_rect(players[i], boxes[players[i].pos])
+			boxCopy.append(boxes[players[i].pos])
 		else:
 			boxes[i].visible = false
+	boxes = boxCopy
 
-func fill_rect(player, rect):
+
+func fill_rect(player, rect, noob=null):
 	var labels = rect.get_child(0).get_children()
-	labels[1].text = str(player.playerName)
-	labels[2].text = str(player.wins)
-	labels[3].text = str(player.streak)
-	labels[4].text = str(player.played)
+	labels[0].text = str(player.playerName)
+	labels[1].text = str(player.wins)
+	labels[2].text = str(player.streak)
+	labels[3].text = str(player.played)
+	if player == noob:
+		if noob_rect:
+			noob_rect.color = noob_rect_color
+		noob_rect = rect
+		noob_rect_color = rect.color
+		rect.color = "#00CC00"
+	
+
 
 func update_standings(players):
+	var noob = _check_for_noob(players)
+	var playerStandings = players
+	playerStandings.sort_custom(_custom_sort)
+	
+	for i in len(playerStandings):
+		fill_rect(playerStandings[i], boxes[i], noob)
+		
+
+func _check_for_noob(players):
+	var streaker = null
 	for player in players:
-		for box in boxes:
-			pass
+		if player.wins == 0:
+			return
+		if not streaker:
+			streaker = player
+		elif streaker.streak < player.streak:
+			streaker = player
+	return streaker
+
+func _custom_sort(a, b):
+	if a.wins > b.wins:
+		return true
+	return false
 
 """
 func fill_panel(players):

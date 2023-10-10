@@ -29,7 +29,7 @@ func update_content(player):
 
 func update_labels():
 	var labels = get_children()
-	labels[1].text = pName
-	labels[2].text = str(wins)
-	labels[3].text = str(streak)
-	labels[4].text = str(played)
+	labels[0].text = pName
+	labels[1].text = str(wins)
+	labels[2].text = str(streak)
+	labels[3].text = str(played)

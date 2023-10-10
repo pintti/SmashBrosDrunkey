@@ -21,12 +21,13 @@ offset_right = 0.319992
 offset_bottom = -0.0800095
 
 [node name="Button" type="Button" parent="playerPositions/Pos1"]
+modulate = Color(1, 1, 1, 0.196078)
 layout_mode = 1
 anchors_preset = -1
-offset_left = -50.0
-offset_top = -50.0
-offset_right = 50.0
-offset_bottom = 50.0
+offset_left = -40.0
+offset_top = -40.0
+offset_right = 40.0
+offset_bottom = 40.0
 
 [node name="Pos2" type="Control" parent="playerPositions"]
 layout_mode = 3
@@ -40,14 +41,15 @@ offset_right = 0.0799866
 offset_bottom = -0.0800095
 
 [node name="Button2" type="Button" parent="playerPositions/Pos2"]
+modulate = Color(1, 1, 1, 0.196078)
 layout_mode = 1
 anchors_preset = -1
 anchor_right = 0.118
 anchor_bottom = 0.908
-offset_left = -50.0
-offset_top = -50.0
-offset_right = 50.0
-offset_bottom = 50.0
+offset_left = -40.0
+offset_top = -40.0
+offset_right = 40.0
+offset_bottom = 40.0
 
 [node name="Pos3" type="Control" parent="playerPositions"]
 layout_mode = 3
@@ -61,14 +63,15 @@ offset_right = 0.0799561
 offset_bottom = -0.0800095
 
 [node name="Button3" type="Button" parent="playerPositions/Pos3"]
+modulate = Color(1, 1, 1, 0.196078)
 layout_mode = 1
 anchors_preset = -1
 anchor_right = 0.118
 anchor_bottom = 0.908
-offset_left = -50.0
-offset_top = -50.0
-offset_right = 50.0
-offset_bottom = 50.0
+offset_left = -40.0
+offset_top = -40.0
+offset_right = 40.0
+offset_bottom = 40.0
 
 [node name="Pos4" type="Control" parent="playerPositions"]
 layout_mode = 3
@@ -82,14 +85,15 @@ offset_right = -0.160034
 offset_bottom = -0.0800095
 
 [node name="Button4" type="Button" parent="playerPositions/Pos4"]
+modulate = Color(1, 1, 1, 0.196078)
 layout_mode = 1
 anchors_preset = -1
 anchor_right = 0.118
 anchor_bottom = 0.908
-offset_left = -50.0
-offset_top = -50.0
-offset_right = 50.0
-offset_bottom = 50.0
+offset_left = -40.0
+offset_top = -40.0
+offset_right = 40.0
+offset_bottom = 40.0
 
 [node name="Pos5" type="Control" parent="playerPositions"]
 layout_mode = 3
@@ -205,13 +209,6 @@ offset_bottom = 362.0
 theme_override_constants/separation = 0
 script = ExtResource("2_yjq0y")
 
-[node name="Label" type="Label" parent="PlayerPanel/ColorRect/HBoxContainer"]
-custom_minimum_size = Vector2(40, 0)
-layout_mode = 2
-size_flags_vertical = 1
-horizontal_alignment = 1
-vertical_alignment = 1
-
 [node name="Label2" type="Label" parent="PlayerPanel/ColorRect/HBoxContainer"]
 custom_minimum_size = Vector2(160, 0)
 layout_mode = 2
@@ -256,14 +253,6 @@ offset_bottom = 362.0
 theme_override_constants/separation = 0
 script = ExtResource("2_yjq0y")
 
-[node name="Label" type="Label" parent="PlayerPanel/ColorRect2/HBoxContainer"]
-custom_minimum_size = Vector2(40, 0)
-layout_mode = 2
-size_flags_vertical = 1
-text = "1"
-horizontal_alignment = 1
-vertical_alignment = 1
-
 [node name="Label2" type="Label" parent="PlayerPanel/ColorRect2/HBoxContainer"]
 custom_minimum_size = Vector2(160, 0)
 layout_mode = 2
@@ -303,14 +292,6 @@ offset_right = 378.0
 offset_bottom = 362.0
 theme_override_constants/separation = 0
 script = ExtResource("2_yjq0y")
-
-[node name="Label" type="Label" parent="PlayerPanel/ColorRect3/HBoxContainer"]
-custom_minimum_size = Vector2(40, 0)
-layout_mode = 2
-size_flags_vertical = 1
-text = "2"
-horizontal_alignment = 1
-vertical_alignment = 1
 
 [node name="Label2" type="Label" parent="PlayerPanel/ColorRect3/HBoxContainer"]
 custom_minimum_size = Vector2(160, 0)
@@ -352,14 +333,6 @@ offset_bottom = 362.0
 theme_override_constants/separation = 0
 script = ExtResource("2_yjq0y")
 
-[node name="Label" type="Label" parent="PlayerPanel/ColorRect4/HBoxContainer"]
-custom_minimum_size = Vector2(40, 0)
-layout_mode = 2
-size_flags_vertical = 1
-text = "3"
-horizontal_alignment = 1
-vertical_alignment = 1
-
 [node name="Label2" type="Label" parent="PlayerPanel/ColorRect4/HBoxContainer"]
 custom_minimum_size = Vector2(160, 0)
 layout_mode = 2
@@ -399,14 +372,6 @@ offset_right = 378.0
 offset_bottom = 362.0
 theme_override_constants/separation = 0
 script = ExtResource("2_yjq0y")
-
-[node name="Label" type="Label" parent="PlayerPanel/ColorRect5/HBoxContainer"]
-custom_minimum_size = Vector2(40, 0)
-layout_mode = 2
-size_flags_vertical = 1
-text = "4"
-horizontal_alignment = 1
-vertical_alignment = 1
 
 [node name="Label2" type="Label" parent="PlayerPanel/ColorRect5/HBoxContainer"]
 custom_minimum_size = Vector2(160, 0)
@@ -448,14 +413,6 @@ offset_bottom = 362.0
 theme_override_constants/separation = 0
 script = ExtResource("2_yjq0y")
 
-[node name="Label" type="Label" parent="PlayerPanel/ColorRect6/HBoxContainer"]
-custom_minimum_size = Vector2(40, 0)
-layout_mode = 2
-size_flags_vertical = 1
-text = "5"
-horizontal_alignment = 1
-vertical_alignment = 1
-
 [node name="Label2" type="Label" parent="PlayerPanel/ColorRect6/HBoxContainer"]
 custom_minimum_size = Vector2(160, 0)
 layout_mode = 2
@@ -495,14 +452,6 @@ offset_right = 378.0
 offset_bottom = 362.0
 theme_override_constants/separation = 0
 script = ExtResource("2_yjq0y")
-
-[node name="Label" type="Label" parent="PlayerPanel/ColorRect7/HBoxContainer"]
-custom_minimum_size = Vector2(40, 0)
-layout_mode = 2
-size_flags_vertical = 1
-text = "6"
-horizontal_alignment = 1
-vertical_alignment = 1
 
 [node name="Label2" type="Label" parent="PlayerPanel/ColorRect7/HBoxContainer"]
 custom_minimum_size = Vector2(160, 0)
@@ -544,14 +493,6 @@ offset_bottom = 362.0
 theme_override_constants/separation = 0
 script = ExtResource("2_yjq0y")
 
-[node name="Label" type="Label" parent="PlayerPanel/ColorRect8/HBoxContainer"]
-custom_minimum_size = Vector2(40, 0)
-layout_mode = 2
-size_flags_vertical = 1
-text = "7"
-horizontal_alignment = 1
-vertical_alignment = 1
-
 [node name="Label2" type="Label" parent="PlayerPanel/ColorRect8/HBoxContainer"]
 custom_minimum_size = Vector2(160, 0)
 layout_mode = 2
@@ -591,14 +532,6 @@ offset_right = 378.0
 offset_bottom = 362.0
 theme_override_constants/separation = 0
 script = ExtResource("2_yjq0y")
-
-[node name="Label" type="Label" parent="PlayerPanel/ColorRect9/HBoxContainer"]
-custom_minimum_size = Vector2(40, 0)
-layout_mode = 2
-size_flags_vertical = 1
-text = "8"
-horizontal_alignment = 1
-vertical_alignment = 1
 
 [node name="Label2" type="Label" parent="PlayerPanel/ColorRect9/HBoxContainer"]
 custom_minimum_size = Vector2(160, 0)
@@ -640,14 +573,6 @@ offset_bottom = 362.0
 theme_override_constants/separation = 0
 script = ExtResource("2_yjq0y")
 
-[node name="Label" type="Label" parent="PlayerPanel/ColorRect10/HBoxContainer"]
-custom_minimum_size = Vector2(40, 0)
-layout_mode = 2
-size_flags_vertical = 1
-text = "9"
-horizontal_alignment = 1
-vertical_alignment = 1
-
 [node name="Label2" type="Label" parent="PlayerPanel/ColorRect10/HBoxContainer"]
 custom_minimum_size = Vector2(160, 0)
 layout_mode = 2
@@ -687,14 +612,6 @@ offset_right = 378.0
 offset_bottom = 362.0
 theme_override_constants/separation = 0
 script = ExtResource("2_yjq0y")
-
-[node name="Label" type="Label" parent="PlayerPanel/ColorRect11/HBoxContainer"]
-custom_minimum_size = Vector2(40, 0)
-layout_mode = 2
-size_flags_vertical = 1
-text = "10"
-horizontal_alignment = 1
-vertical_alignment = 1
 
 [node name="Label2" type="Label" parent="PlayerPanel/ColorRect11/HBoxContainer"]
 custom_minimum_size = Vector2(160, 0)
@@ -736,14 +653,6 @@ offset_bottom = 362.0
 theme_override_constants/separation = 0
 script = ExtResource("2_yjq0y")
 
-[node name="Label" type="Label" parent="PlayerPanel/ColorRect12/HBoxContainer"]
-custom_minimum_size = Vector2(40, 0)
-layout_mode = 2
-size_flags_vertical = 1
-text = "11"
-horizontal_alignment = 1
-vertical_alignment = 1
-
 [node name="Label2" type="Label" parent="PlayerPanel/ColorRect12/HBoxContainer"]
 custom_minimum_size = Vector2(160, 0)
 layout_mode = 2
@@ -783,14 +692,6 @@ offset_right = 378.0
 offset_bottom = 362.0
 theme_override_constants/separation = 0
 script = ExtResource("2_yjq0y")
-
-[node name="Label" type="Label" parent="PlayerPanel/ColorRect13/HBoxContainer"]
-custom_minimum_size = Vector2(40, 0)
-layout_mode = 2
-size_flags_vertical = 1
-text = "12"
-horizontal_alignment = 1
-vertical_alignment = 1
 
 [node name="Label2" type="Label" parent="PlayerPanel/ColorRect13/HBoxContainer"]
 custom_minimum_size = Vector2(160, 0)
@@ -832,14 +733,6 @@ offset_bottom = 362.0
 theme_override_constants/separation = 0
 script = ExtResource("2_yjq0y")
 
-[node name="Label" type="Label" parent="PlayerPanel/ColorRect14/HBoxContainer"]
-custom_minimum_size = Vector2(40, 0)
-layout_mode = 2
-size_flags_vertical = 1
-text = "13"
-horizontal_alignment = 1
-vertical_alignment = 1
-
 [node name="Label2" type="Label" parent="PlayerPanel/ColorRect14/HBoxContainer"]
 custom_minimum_size = Vector2(160, 0)
 layout_mode = 2
@@ -879,14 +772,6 @@ offset_right = 378.0
 offset_bottom = 362.0
 theme_override_constants/separation = 0
 script = ExtResource("2_yjq0y")
-
-[node name="Label" type="Label" parent="PlayerPanel/ColorRect15/HBoxContainer"]
-custom_minimum_size = Vector2(40, 0)
-layout_mode = 2
-size_flags_vertical = 1
-text = "14"
-horizontal_alignment = 1
-vertical_alignment = 1
 
 [node name="Label2" type="Label" parent="PlayerPanel/ColorRect15/HBoxContainer"]
 custom_minimum_size = Vector2(160, 0)
