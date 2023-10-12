@@ -5,6 +5,8 @@ var cont_size
 var noob_rect
 var noob_rect_color
 
+var dnf_amount = -1
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	boxes = get_children()
@@ -12,7 +14,7 @@ func _ready():
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
+func _process(_delta):
 	pass
 
 
@@ -28,7 +30,7 @@ func fill_panel(players):
 	boxes = boxCopy
 
 
-func fill_rect(player, rect, noob=null):
+func fill_rect(player, rect):
 	rect.get_child(0).update_content(player)
 
 
@@ -49,6 +51,7 @@ func update_standings(players):
 		players[i].playerBox.update_content(players[i])
 		add_noob(players[i], boxes[i], noob)
 
+
 func _check_for_noob(players):
 	var streaker = null
 	for player in players:
@@ -60,5 +63,9 @@ func _check_for_noob(players):
 			streaker = player
 	return streaker
 
-
+func move_dnf(player):
+	var newPosition = boxes[dnf_amount].global_position
+	player.playerBox.newPosition = newPosition
+	boxes[dnf_amount].color = "#424949"
+	dnf_amount -= 1
 

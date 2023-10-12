@@ -15,11 +15,10 @@ func _ready():
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
+func _process(_delta):
 	if not parent_size:
 		parent_size = get_parent_area_size()
 		set_size(parent_size)
-		var labels = get_children()
 	if newPosition:
 		if global_position.distance_to(newPosition) > 5:
 			#print("not at right position: ", global_position, " != ", newPosition)

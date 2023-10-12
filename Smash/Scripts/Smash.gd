@@ -18,7 +18,14 @@ var testPlayers = {
 var players = []
 var positions = []
 
+var dnf_amount = 0
+
 var Player
+
+var skip = false
+var dnf = false
+
+var made_actions = []
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -28,15 +35,18 @@ func _ready():
 		newPlayer.playerName = player
 		newPlayer.add_texture(testPlayers[player]["sprite"])
 		players.append(newPlayer)
-	shuffle_players(players)
+	shuffle_players()
 	_get_player_positions()
 	_assign_player_start_pos()
 	
 	for player in players:
 		add_child(player)
 		player._add_name()
+		$Button/DNFButton.get_popup().add_item(player.playerName)
+	$Button/DNFButton.get_popup().index_pressed.connect(_on_dnf_button_pressed)
 		
 	$PlayerPanel.fill_panel(players)
+	
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta):
@@ -48,7 +58,7 @@ func _assign_player_start_pos():
 		players[i].move(positions[i].position)
 
 
-func shuffle_players(playerNames):
+func shuffle_players():
 	var playersCopy = []
 	for i in len(players):
 		var chosenPlayer = players.pick_random()
@@ -78,13 +88,18 @@ func winner_move(number):
 		elif players[i].pos < len(players)+1 and players[i].pos > 4:
 			players[i].pos -= 1
 		elif players[i].pos < 4:
-			players[i].played += 1
-			if players[i].pos != number:
-				players[i].streak += 1
-			else:
-				players[i].wins += 1
-				players[i].pos = len(players)-1
-				players[i].streak = 0
+			if not skip:
+				players[i].played += 1
+				if players[i].pos != number:
+					players[i].streak += 1
+				else:
+					players[i].wins += 1
+					players[i].pos = len(players)-1
+					players[i].streak = 0
+			elif skip:
+				if players[i].pos == number:
+					players[i].pos = len(players)-1
+					players[i].streak = 0
 
 	for i in len(players):
 		players[i].move(positions[players[i].pos].position) # I will not ask for forgiveness
@@ -94,6 +109,7 @@ func winner_move(number):
 		var playerIndex = players.find(copyPlayers[i])
 		players[playerIndex].scorePos = i
 	$PlayerPanel.update_standings(players)
+
 
 func _custom_sort(a, b):
 	if a.wins > b.wins:
@@ -109,3 +125,50 @@ func _on_button_3_pressed():
 	winner_move(2)
 func _on_button_4_pressed():
 	winner_move(3)
+
+func _on_button_toggled(button_pressed):
+	if button_pressed:
+		$SkipButton.modulate = Color(1, 0, 0)
+		skip = true
+		if dnf:
+			$DNFButton.modulate = Color(1, 1, 1)
+			dnf = false
+	else:
+		$SkipButton.modulate = Color(1, 1, 1)
+		skip = false
+
+func _on_dnf_button_pressed(player):
+	var dnf_player = $Button/DNFButton.get_popup().get_item_text(player)
+	$Button/DNFButton.get_popup().remove_item(player)
+	for curPlayer in players:
+		if curPlayer.playerName == dnf_player:
+			dnf_action(curPlayer)
+
+
+func dnf_action(dnf_player):
+	var dnf_player_pos = dnf_player.pos
+	dnf_player.dnf = true
+	for player in players:
+		if dnf_player_pos < 4:
+			if player.pos == 4:
+				player.pos = dnf_player_pos
+			elif player.pos > dnf_player_pos and player.pos > 3:
+				player.pos -= 1
+		else:
+			if player.pos > dnf_player_pos:
+				player.pos -= 1
+	players.erase(dnf_player)
+	$PlayerPanel.move_dnf(dnf_player)
+	
+	var dnf_spot = $DNFSpot.get_global_rect()
+	if dnf_amount < 5:
+		dnf_spot = dnf_spot.position + Vector2(50*dnf_amount, 20*dnf_amount)
+	else:
+		dnf_spot = dnf_spot.position + Vector2(50*(dnf_amount-5), 100*(dnf_amount-4))
+	dnf_player.move(dnf_spot)
+	dnf_amount += 1
+	
+	for i in len(players):
+		players[i].move(positions[players[i].pos].position)
+	$PlayerPanel.update_standings(players)
+		

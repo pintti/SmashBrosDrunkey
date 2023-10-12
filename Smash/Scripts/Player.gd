@@ -23,7 +23,7 @@ func _ready():
 	add_to_group("players")
 
 
-func _process(delta):
+func _process(_delta):
 	if pos < 4 and not fighting:
 		pass
 		# Tween here
