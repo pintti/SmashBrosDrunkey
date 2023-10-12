@@ -10,12 +10,14 @@ var mod = 1
 var new_position = Vector2(0, 0)
 
 var fighting = false
+var moving = false
 var dnf = false
 
 var playerName
 var charSize
 var playerSprite
 var playerBoxColor
+var playerBox
 
 func _ready():
 	add_to_group("players")
@@ -25,19 +27,21 @@ func _process(delta):
 	if pos < 4 and not fighting:
 		pass
 		# Tween here
-	if position.distance_to(new_position) > 5:
-		velocity = position.direction_to(new_position) * 700
-		move_and_slide()
-	else:
-		position = new_position
+	if moving:
+		if position.distance_to(new_position) > 10:
+			velocity = position.direction_to(new_position) * 700
+			move_and_slide()
+		else:
+			position = new_position
+			moving = false
+			
 
 func move(newPos):
 	new_position = newPos
+	moving = true
 	if position == Vector2(0, 0):
 		position = new_position
-	if pos < 2 or pos == 4:
-		playerSprite.flip_h = true
-	elif pos > 8:
+	if pos < 2 or pos == 4 or pos > 8:
 		playerSprite.flip_h = true
 	else:
 		playerSprite.flip_h = false

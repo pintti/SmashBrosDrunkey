@@ -88,7 +88,17 @@ func winner_move(number):
 
 	for i in len(players):
 		players[i].move(positions[players[i].pos].position) # I will not ask for forgiveness
+	var copyPlayers = players
+	copyPlayers.sort_custom(_custom_sort)
+	for i in len(copyPlayers):
+		var playerIndex = players.find(copyPlayers[i])
+		players[playerIndex].scorePos = i
 	$PlayerPanel.update_standings(players)
+
+func _custom_sort(a, b):
+	if a.wins > b.wins:
+		return true
+	return false
 
 
 func _on_button_pressed():

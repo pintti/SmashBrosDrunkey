@@ -2,6 +2,8 @@ extends HBoxContainer
 
 var parent_size
 
+var newPosition
+
 var pName
 var wins
 var streak
@@ -17,9 +19,21 @@ func _process(delta):
 	if not parent_size:
 		parent_size = get_parent_area_size()
 		set_size(parent_size)
+		var labels = get_children()
+	if newPosition:
+		if global_position.distance_to(newPosition) > 5:
+			#print("not at right position: ", global_position, " != ", newPosition)
+			var dir = global_position.direction_to(newPosition) * abs((global_position - newPosition)) / 15
+			position += dir
+		else:
+			global_position = newPosition
+	else:
+		newPosition = global_position
 
 
 func update_content(player):
+	if not player.playerBox:
+		player.playerBox = self
 	pName = player.playerName
 	wins = player.wins
 	streak = player.streak

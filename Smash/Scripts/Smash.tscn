@@ -203,7 +203,7 @@ size_flags_vertical = 3
 color = Color(0.8, 0, 0.2, 1)
 
 [node name="HBoxContainer" type="HBoxContainer" parent="PlayerPanel/ColorRect"]
-layout_mode = 0
+z_index = 1
 offset_right = 378.0
 offset_bottom = 362.0
 theme_override_constants/separation = 0
@@ -213,6 +213,7 @@ script = ExtResource("2_yjq0y")
 custom_minimum_size = Vector2(160, 0)
 layout_mode = 2
 size_flags_vertical = 1
+theme_override_font_sizes/font_size = 20
 text = "Name"
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -221,6 +222,7 @@ vertical_alignment = 1
 custom_minimum_size = Vector2(60, 0)
 layout_mode = 2
 size_flags_vertical = 1
+theme_override_font_sizes/font_size = 20
 text = "Wins"
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -229,6 +231,7 @@ vertical_alignment = 1
 custom_minimum_size = Vector2(60, 0)
 layout_mode = 2
 size_flags_vertical = 1
+theme_override_font_sizes/font_size = 20
 text = "Streak"
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -237,17 +240,19 @@ vertical_alignment = 1
 custom_minimum_size = Vector2(60, 0)
 layout_mode = 2
 size_flags_vertical = 1
+theme_override_font_sizes/font_size = 20
 text = "Played"
 horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="ColorRect2" type="ColorRect" parent="PlayerPanel"]
+show_behind_parent = true
 layout_mode = 2
 size_flags_vertical = 3
 color = Color(1, 0.6, 0, 1)
 
 [node name="HBoxContainer" type="HBoxContainer" parent="PlayerPanel/ColorRect2"]
-layout_mode = 0
+z_index = 1
 offset_right = 378.0
 offset_bottom = 362.0
 theme_override_constants/separation = 0
@@ -257,6 +262,7 @@ script = ExtResource("2_yjq0y")
 custom_minimum_size = Vector2(160, 0)
 layout_mode = 2
 size_flags_vertical = 1
+theme_override_font_sizes/font_size = 25
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -264,6 +270,7 @@ vertical_alignment = 1
 custom_minimum_size = Vector2(60, 0)
 layout_mode = 2
 size_flags_vertical = 1
+theme_override_font_sizes/font_size = 25
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -271,6 +278,7 @@ vertical_alignment = 1
 custom_minimum_size = Vector2(60, 0)
 layout_mode = 2
 size_flags_vertical = 1
+theme_override_font_sizes/font_size = 25
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -278,6 +286,7 @@ vertical_alignment = 1
 custom_minimum_size = Vector2(60, 0)
 layout_mode = 2
 size_flags_vertical = 1
+theme_override_font_sizes/font_size = 25
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -287,7 +296,7 @@ size_flags_vertical = 3
 color = Color(0.8, 0, 0.2, 1)
 
 [node name="HBoxContainer" type="HBoxContainer" parent="PlayerPanel/ColorRect3"]
-layout_mode = 0
+z_index = 1
 offset_right = 378.0
 offset_bottom = 362.0
 theme_override_constants/separation = 0
@@ -297,6 +306,7 @@ script = ExtResource("2_yjq0y")
 custom_minimum_size = Vector2(160, 0)
 layout_mode = 2
 size_flags_vertical = 1
+theme_override_font_sizes/font_size = 25
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -304,6 +314,7 @@ vertical_alignment = 1
 custom_minimum_size = Vector2(60, 0)
 layout_mode = 2
 size_flags_vertical = 1
+theme_override_font_sizes/font_size = 25
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -311,6 +322,7 @@ vertical_alignment = 1
 custom_minimum_size = Vector2(60, 0)
 layout_mode = 2
 size_flags_vertical = 1
+theme_override_font_sizes/font_size = 25
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -318,6 +330,7 @@ vertical_alignment = 1
 custom_minimum_size = Vector2(60, 0)
 layout_mode = 2
 size_flags_vertical = 1
+theme_override_font_sizes/font_size = 25
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -327,7 +340,7 @@ size_flags_vertical = 3
 color = Color(1, 0.6, 0, 1)
 
 [node name="HBoxContainer" type="HBoxContainer" parent="PlayerPanel/ColorRect4"]
-layout_mode = 0
+z_index = 1
 offset_right = 378.0
 offset_bottom = 362.0
 theme_override_constants/separation = 0
@@ -337,6 +350,7 @@ script = ExtResource("2_yjq0y")
 custom_minimum_size = Vector2(160, 0)
 layout_mode = 2
 size_flags_vertical = 1
+theme_override_font_sizes/font_size = 25
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -344,6 +358,7 @@ vertical_alignment = 1
 custom_minimum_size = Vector2(60, 0)
 layout_mode = 2
 size_flags_vertical = 1
+theme_override_font_sizes/font_size = 25
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -351,6 +366,7 @@ vertical_alignment = 1
 custom_minimum_size = Vector2(60, 0)
 layout_mode = 2
 size_flags_vertical = 1
+theme_override_font_sizes/font_size = 25
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -358,6 +374,7 @@ vertical_alignment = 1
 custom_minimum_size = Vector2(60, 0)
 layout_mode = 2
 size_flags_vertical = 1
+theme_override_font_sizes/font_size = 25
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -367,7 +384,7 @@ size_flags_vertical = 3
 color = Color(0.8, 0, 0.2, 1)
 
 [node name="HBoxContainer" type="HBoxContainer" parent="PlayerPanel/ColorRect5"]
-layout_mode = 0
+z_index = 1
 offset_right = 378.0
 offset_bottom = 362.0
 theme_override_constants/separation = 0
@@ -377,6 +394,7 @@ script = ExtResource("2_yjq0y")
 custom_minimum_size = Vector2(160, 0)
 layout_mode = 2
 size_flags_vertical = 1
+theme_override_font_sizes/font_size = 25
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -384,6 +402,7 @@ vertical_alignment = 1
 custom_minimum_size = Vector2(60, 0)
 layout_mode = 2
 size_flags_vertical = 1
+theme_override_font_sizes/font_size = 25
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -391,6 +410,7 @@ vertical_alignment = 1
 custom_minimum_size = Vector2(60, 0)
 layout_mode = 2
 size_flags_vertical = 1
+theme_override_font_sizes/font_size = 25
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -398,6 +418,7 @@ vertical_alignment = 1
 custom_minimum_size = Vector2(60, 0)
 layout_mode = 2
 size_flags_vertical = 1
+theme_override_font_sizes/font_size = 25
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -407,7 +428,7 @@ size_flags_vertical = 3
 color = Color(1, 0.6, 0, 1)
 
 [node name="HBoxContainer" type="HBoxContainer" parent="PlayerPanel/ColorRect6"]
-layout_mode = 0
+z_index = 1
 offset_right = 378.0
 offset_bottom = 362.0
 theme_override_constants/separation = 0
@@ -417,6 +438,7 @@ script = ExtResource("2_yjq0y")
 custom_minimum_size = Vector2(160, 0)
 layout_mode = 2
 size_flags_vertical = 1
+theme_override_font_sizes/font_size = 25
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -424,6 +446,7 @@ vertical_alignment = 1
 custom_minimum_size = Vector2(60, 0)
 layout_mode = 2
 size_flags_vertical = 1
+theme_override_font_sizes/font_size = 25
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -431,6 +454,7 @@ vertical_alignment = 1
 custom_minimum_size = Vector2(60, 0)
 layout_mode = 2
 size_flags_vertical = 1
+theme_override_font_sizes/font_size = 25
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -438,6 +462,7 @@ vertical_alignment = 1
 custom_minimum_size = Vector2(60, 0)
 layout_mode = 2
 size_flags_vertical = 1
+theme_override_font_sizes/font_size = 25
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -447,7 +472,7 @@ size_flags_vertical = 3
 color = Color(0.8, 0, 0.2, 1)
 
 [node name="HBoxContainer" type="HBoxContainer" parent="PlayerPanel/ColorRect7"]
-layout_mode = 0
+z_index = 1
 offset_right = 378.0
 offset_bottom = 362.0
 theme_override_constants/separation = 0
@@ -457,6 +482,7 @@ script = ExtResource("2_yjq0y")
 custom_minimum_size = Vector2(160, 0)
 layout_mode = 2
 size_flags_vertical = 1
+theme_override_font_sizes/font_size = 25
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -464,6 +490,7 @@ vertical_alignment = 1
 custom_minimum_size = Vector2(60, 0)
 layout_mode = 2
 size_flags_vertical = 1
+theme_override_font_sizes/font_size = 25
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -471,6 +498,7 @@ vertical_alignment = 1
 custom_minimum_size = Vector2(60, 0)
 layout_mode = 2
 size_flags_vertical = 1
+theme_override_font_sizes/font_size = 25
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -478,6 +506,7 @@ vertical_alignment = 1
 custom_minimum_size = Vector2(60, 0)
 layout_mode = 2
 size_flags_vertical = 1
+theme_override_font_sizes/font_size = 25
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -487,7 +516,7 @@ size_flags_vertical = 3
 color = Color(1, 0.6, 0, 1)
 
 [node name="HBoxContainer" type="HBoxContainer" parent="PlayerPanel/ColorRect8"]
-layout_mode = 0
+z_index = 1
 offset_right = 378.0
 offset_bottom = 362.0
 theme_override_constants/separation = 0
@@ -497,6 +526,7 @@ script = ExtResource("2_yjq0y")
 custom_minimum_size = Vector2(160, 0)
 layout_mode = 2
 size_flags_vertical = 1
+theme_override_font_sizes/font_size = 25
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -504,6 +534,7 @@ vertical_alignment = 1
 custom_minimum_size = Vector2(60, 0)
 layout_mode = 2
 size_flags_vertical = 1
+theme_override_font_sizes/font_size = 25
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -511,6 +542,7 @@ vertical_alignment = 1
 custom_minimum_size = Vector2(60, 0)
 layout_mode = 2
 size_flags_vertical = 1
+theme_override_font_sizes/font_size = 25
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -518,6 +550,7 @@ vertical_alignment = 1
 custom_minimum_size = Vector2(60, 0)
 layout_mode = 2
 size_flags_vertical = 1
+theme_override_font_sizes/font_size = 25
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -527,7 +560,7 @@ size_flags_vertical = 3
 color = Color(0.8, 0, 0.2, 1)
 
 [node name="HBoxContainer" type="HBoxContainer" parent="PlayerPanel/ColorRect9"]
-layout_mode = 0
+z_index = 1
 offset_right = 378.0
 offset_bottom = 362.0
 theme_override_constants/separation = 0
@@ -537,6 +570,7 @@ script = ExtResource("2_yjq0y")
 custom_minimum_size = Vector2(160, 0)
 layout_mode = 2
 size_flags_vertical = 1
+theme_override_font_sizes/font_size = 25
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -544,6 +578,7 @@ vertical_alignment = 1
 custom_minimum_size = Vector2(60, 0)
 layout_mode = 2
 size_flags_vertical = 1
+theme_override_font_sizes/font_size = 25
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -551,6 +586,7 @@ vertical_alignment = 1
 custom_minimum_size = Vector2(60, 0)
 layout_mode = 2
 size_flags_vertical = 1
+theme_override_font_sizes/font_size = 25
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -558,6 +594,7 @@ vertical_alignment = 1
 custom_minimum_size = Vector2(60, 0)
 layout_mode = 2
 size_flags_vertical = 1
+theme_override_font_sizes/font_size = 25
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -567,7 +604,7 @@ size_flags_vertical = 3
 color = Color(1, 0.6, 0, 1)
 
 [node name="HBoxContainer" type="HBoxContainer" parent="PlayerPanel/ColorRect10"]
-layout_mode = 0
+z_index = 1
 offset_right = 378.0
 offset_bottom = 362.0
 theme_override_constants/separation = 0
@@ -577,6 +614,7 @@ script = ExtResource("2_yjq0y")
 custom_minimum_size = Vector2(160, 0)
 layout_mode = 2
 size_flags_vertical = 1
+theme_override_font_sizes/font_size = 25
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -584,6 +622,7 @@ vertical_alignment = 1
 custom_minimum_size = Vector2(60, 0)
 layout_mode = 2
 size_flags_vertical = 1
+theme_override_font_sizes/font_size = 25
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -591,6 +630,7 @@ vertical_alignment = 1
 custom_minimum_size = Vector2(60, 0)
 layout_mode = 2
 size_flags_vertical = 1
+theme_override_font_sizes/font_size = 25
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -598,6 +638,7 @@ vertical_alignment = 1
 custom_minimum_size = Vector2(60, 0)
 layout_mode = 2
 size_flags_vertical = 1
+theme_override_font_sizes/font_size = 25
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -607,7 +648,7 @@ size_flags_vertical = 3
 color = Color(0.8, 0, 0.2, 1)
 
 [node name="HBoxContainer" type="HBoxContainer" parent="PlayerPanel/ColorRect11"]
-layout_mode = 0
+z_index = 1
 offset_right = 378.0
 offset_bottom = 362.0
 theme_override_constants/separation = 0
@@ -617,6 +658,7 @@ script = ExtResource("2_yjq0y")
 custom_minimum_size = Vector2(160, 0)
 layout_mode = 2
 size_flags_vertical = 1
+theme_override_font_sizes/font_size = 25
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -624,6 +666,7 @@ vertical_alignment = 1
 custom_minimum_size = Vector2(60, 0)
 layout_mode = 2
 size_flags_vertical = 1
+theme_override_font_sizes/font_size = 25
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -631,6 +674,7 @@ vertical_alignment = 1
 custom_minimum_size = Vector2(60, 0)
 layout_mode = 2
 size_flags_vertical = 1
+theme_override_font_sizes/font_size = 25
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -638,6 +682,7 @@ vertical_alignment = 1
 custom_minimum_size = Vector2(60, 0)
 layout_mode = 2
 size_flags_vertical = 1
+theme_override_font_sizes/font_size = 25
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -647,7 +692,7 @@ size_flags_vertical = 3
 color = Color(1, 0.6, 0, 1)
 
 [node name="HBoxContainer" type="HBoxContainer" parent="PlayerPanel/ColorRect12"]
-layout_mode = 0
+z_index = 1
 offset_right = 378.0
 offset_bottom = 362.0
 theme_override_constants/separation = 0
@@ -657,6 +702,7 @@ script = ExtResource("2_yjq0y")
 custom_minimum_size = Vector2(160, 0)
 layout_mode = 2
 size_flags_vertical = 1
+theme_override_font_sizes/font_size = 25
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -664,6 +710,7 @@ vertical_alignment = 1
 custom_minimum_size = Vector2(60, 0)
 layout_mode = 2
 size_flags_vertical = 1
+theme_override_font_sizes/font_size = 25
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -671,6 +718,7 @@ vertical_alignment = 1
 custom_minimum_size = Vector2(60, 0)
 layout_mode = 2
 size_flags_vertical = 1
+theme_override_font_sizes/font_size = 25
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -678,6 +726,7 @@ vertical_alignment = 1
 custom_minimum_size = Vector2(60, 0)
 layout_mode = 2
 size_flags_vertical = 1
+theme_override_font_sizes/font_size = 25
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -687,7 +736,7 @@ size_flags_vertical = 3
 color = Color(0.8, 0, 0.2, 1)
 
 [node name="HBoxContainer" type="HBoxContainer" parent="PlayerPanel/ColorRect13"]
-layout_mode = 0
+z_index = 1
 offset_right = 378.0
 offset_bottom = 362.0
 theme_override_constants/separation = 0
@@ -697,6 +746,7 @@ script = ExtResource("2_yjq0y")
 custom_minimum_size = Vector2(160, 0)
 layout_mode = 2
 size_flags_vertical = 1
+theme_override_font_sizes/font_size = 25
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -704,6 +754,7 @@ vertical_alignment = 1
 custom_minimum_size = Vector2(60, 0)
 layout_mode = 2
 size_flags_vertical = 1
+theme_override_font_sizes/font_size = 25
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -711,6 +762,7 @@ vertical_alignment = 1
 custom_minimum_size = Vector2(60, 0)
 layout_mode = 2
 size_flags_vertical = 1
+theme_override_font_sizes/font_size = 25
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -718,6 +770,7 @@ vertical_alignment = 1
 custom_minimum_size = Vector2(60, 0)
 layout_mode = 2
 size_flags_vertical = 1
+theme_override_font_sizes/font_size = 25
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -727,7 +780,7 @@ size_flags_vertical = 3
 color = Color(1, 0.6, 0, 1)
 
 [node name="HBoxContainer" type="HBoxContainer" parent="PlayerPanel/ColorRect14"]
-layout_mode = 0
+z_index = 1
 offset_right = 378.0
 offset_bottom = 362.0
 theme_override_constants/separation = 0
@@ -737,6 +790,7 @@ script = ExtResource("2_yjq0y")
 custom_minimum_size = Vector2(160, 0)
 layout_mode = 2
 size_flags_vertical = 1
+theme_override_font_sizes/font_size = 25
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -744,6 +798,7 @@ vertical_alignment = 1
 custom_minimum_size = Vector2(60, 0)
 layout_mode = 2
 size_flags_vertical = 1
+theme_override_font_sizes/font_size = 25
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -751,6 +806,7 @@ vertical_alignment = 1
 custom_minimum_size = Vector2(60, 0)
 layout_mode = 2
 size_flags_vertical = 1
+theme_override_font_sizes/font_size = 25
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -758,6 +814,7 @@ vertical_alignment = 1
 custom_minimum_size = Vector2(60, 0)
 layout_mode = 2
 size_flags_vertical = 1
+theme_override_font_sizes/font_size = 25
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -767,7 +824,7 @@ size_flags_vertical = 3
 color = Color(0.8, 0, 0.2, 1)
 
 [node name="HBoxContainer" type="HBoxContainer" parent="PlayerPanel/ColorRect15"]
-layout_mode = 0
+z_index = 1
 offset_right = 378.0
 offset_bottom = 362.0
 theme_override_constants/separation = 0
@@ -777,6 +834,7 @@ script = ExtResource("2_yjq0y")
 custom_minimum_size = Vector2(160, 0)
 layout_mode = 2
 size_flags_vertical = 1
+theme_override_font_sizes/font_size = 25
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -784,6 +842,7 @@ vertical_alignment = 1
 custom_minimum_size = Vector2(60, 0)
 layout_mode = 2
 size_flags_vertical = 1
+theme_override_font_sizes/font_size = 25
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -791,6 +850,7 @@ vertical_alignment = 1
 custom_minimum_size = Vector2(60, 0)
 layout_mode = 2
 size_flags_vertical = 1
+theme_override_font_sizes/font_size = 25
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -798,6 +858,7 @@ vertical_alignment = 1
 custom_minimum_size = Vector2(60, 0)
 layout_mode = 2
 size_flags_vertical = 1
+theme_override_font_sizes/font_size = 25
 horizontal_alignment = 1
 vertical_alignment = 1
 
