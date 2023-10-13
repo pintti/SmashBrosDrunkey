@@ -41,6 +41,10 @@ func add_noob(player, rect, noob):
 		noob_rect = rect
 		noob_rect_color = rect.color
 		rect.color = "#00CC00"
+	elif rect.color == Color("#00CC00"):
+		rect.color = noob_rect_color
+		noob_rect = null
+		noob_rect_color = null
 
 
 func update_standings(players):

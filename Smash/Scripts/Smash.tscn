@@ -947,3 +947,4 @@ grow_vertical = 2
 [connection signal="pressed" from="playerPositions/Pos3/Button3" to="." method="_on_button_3_pressed"]
 [connection signal="pressed" from="playerPositions/Pos4/Button4" to="." method="_on_button_4_pressed"]
 [connection signal="toggled" from="SkipButton" to="." method="_on_button_toggled"]
+[connection signal="pressed" from="RevertButton" to="." method="_on_revert_button_pressed"]
