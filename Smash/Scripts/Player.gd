@@ -38,7 +38,7 @@ func _process(_delta):
 			position = new_position
 			playerSprite.position = Vector2(0, 0)
 			moving = false
-	elif pos > 3 and fighting:
+	elif pos > 3 and fighting or dnf:
 		fighting = false
 		playerTween.kill()
 

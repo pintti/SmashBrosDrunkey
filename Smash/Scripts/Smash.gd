@@ -38,7 +38,7 @@ func _ready():
 		var json_string = data.get_line()
 		var json = JSON.new()
 		var error = json.parse(json_string)
-		var testPlayers = json.data
+		testPlayers = json.data
 
 	for player in testPlayers:
 		var newPlayer = Player.new()
@@ -188,7 +188,8 @@ func dnf_action(dnf_player):
 	for i in len(players):
 		players[i].move(positions[players[i].pos].position)
 	$PlayerPanel.update_standings(players)
-	made_actions.append(dnf_player)
+	#made_actions.append(dnf_player)
+	made_actions = []
 
 
 func _on_revert_button_pressed():
