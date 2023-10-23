@@ -926,10 +926,10 @@ anchor_left = 0.039
 anchor_top = 0.069
 anchor_right = 0.07
 anchor_bottom = 0.111
-offset_left = -39.92
-offset_top = 650.32
-offset_right = -40.6
-offset_bottom = 650.08
+offset_left = -41.92
+offset_top = 637.32
+offset_right = -42.6
+offset_bottom = 637.08
 theme_override_font_sizes/font_size = 15
 button_mask = 4
 text = "DNF"
@@ -939,12 +939,34 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 1.0
-offset_top = 1.0
-offset_right = 1.0
-offset_bottom = -1.0
+offset_left = -1.0
+offset_top = 2.0
+offset_right = -1.0
 grow_horizontal = 2
 grow_vertical = 2
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.5
+one_shot = true
+
+[node name="WinnerLabel" type="Label" parent="."]
+anchors_preset = -1
+anchor_left = 0.268
+anchor_top = 0.5
+anchor_right = 0.451
+anchor_bottom = 0.565
+offset_left = -0.0400085
+offset_top = -6.0
+offset_right = -0.280029
+offset_bottom = 0.200012
+theme_override_colors/font_color = Color(1, 1, 0, 1)
+theme_override_font_sizes/font_size = 50
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="RestoreTimer" type="Timer" parent="."]
+wait_time = 0.2
+one_shot = true
 
 [connection signal="pressed" from="playerPositions/Pos1/Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="playerPositions/Pos2/Button2" to="." method="_on_button_2_pressed"]
@@ -952,3 +974,5 @@ grow_vertical = 2
 [connection signal="pressed" from="playerPositions/Pos4/Button4" to="." method="_on_button_4_pressed"]
 [connection signal="toggled" from="SkipButton" to="." method="_on_button_toggled"]
 [connection signal="pressed" from="RevertButton" to="." method="_on_revert_button_pressed"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="timeout" from="RestoreTimer" to="." method="_on_restore_timer_timeout"]

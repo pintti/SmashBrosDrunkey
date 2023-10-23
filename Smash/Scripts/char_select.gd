@@ -31,6 +31,9 @@ func _on_button_pressed():
 		chosenNode._on_char_selected(playerName)
 		chosenNode = null
 		chosenSprite = null
+		$RichTextLabel.modulate = Color(1, 1, 1)
+	else:
+		$RichTextLabel.modulate = Color(1, 0, 0)
 
 func _on_sprite_selected(node, sprite):
 	if chosenNode and chosenNode not in chosenNodes:
@@ -41,10 +44,15 @@ func _on_sprite_selected(node, sprite):
 
 
 func _on_smash_button_pressed():
-	var smash_players = FileAccess.open("smashers.smash", FileAccess.WRITE)
-	var json_players = JSON.stringify(players)
-	smash_players.store_line(json_players)
-	get_tree().change_scene_to_file("res://Scripts/Smash.tscn")
+	if $DrinkAmount.text:
+		var smash_players = FileAccess.open("smashers.smash", FileAccess.WRITE)
+		var json_players = JSON.stringify(players)
+		smash_players.store_line(json_players)
+		var json_drink_amount = JSON.stringify($DrinkAmount.text)
+		smash_players.store_line(json_drink_amount)
+		get_tree().change_scene_to_file("res://Scripts/Smash.tscn")
+	else:
+		$DrinkAmount.modulate = Color(1, 0, 0)
 
 
 func _on_timer_timeout():
@@ -75,3 +83,7 @@ func _on_line_edit_text_changed(new_text):
 	elif "jaajo" not in players:
 		$SpriteButton79.chosen = false
 		$SpriteButton79/Sprite2D.modulate = Color(1, 1, 1)
+
+
+func _on_drink_amount_text_changed(new_text):
+	$DrinkAmount.modulate = Color(1, 1, 1)

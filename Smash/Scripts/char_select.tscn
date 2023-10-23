@@ -1381,20 +1381,44 @@ placeholder_text = "Player Name"
 
 [node name="SmashButton" type="Button" parent="."]
 anchors_preset = -1
-anchor_left = 0.933
-anchor_top = 0.928
-anchor_right = 0.933
-anchor_bottom = 0.928
-offset_left = -76.24
-offset_top = -47.16
-offset_right = 75.76
-offset_bottom = 46.84
+anchor_left = 0.867
+anchor_top = 0.896
+anchor_right = 0.992
+anchor_bottom = 0.993
+offset_left = 0.23999
+offset_top = -0.119995
+offset_right = 0.23999
+offset_bottom = 0.039978
 theme_override_font_sizes/font_size = 40
 text = "SMASH"
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 0.01
 autostart = true
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.879
+anchor_right = 0.64
+anchor_bottom = 0.968
+offset_left = -1.0
+offset_top = 0.119873
+offset_right = -0.200195
+offset_bottom = 0.039917
+text = "Choose a character, enter your name, then press 'Ready'"
+
+[node name="DrinkAmount" type="LineEdit" parent="."]
+anchors_preset = -1
+anchor_left = 0.929
+anchor_top = 0.867
+anchor_right = 0.929
+anchor_bottom = 0.867
+offset_left = -67.12
+offset_top = -17.2401
+offset_right = 67.88
+offset_bottom = 17.7599
+placeholder_text = "Enter Drink Amount"
 
 [connection signal="mouse_entered" from="SpriteButton" to="SpriteButton" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="SpriteButton" to="SpriteButton" method="_on_mouse_exited"]
@@ -1637,3 +1661,4 @@ autostart = true
 [connection signal="text_changed" from="LineEdit" to="." method="_on_line_edit_text_changed"]
 [connection signal="pressed" from="SmashButton" to="." method="_on_smash_button_pressed"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="text_changed" from="DrinkAmount" to="." method="_on_drink_amount_text_changed"]

@@ -22,9 +22,21 @@ func fill_panel(players):
 	var boxCopy = []
 	for i in len(boxes):
 		if i < len(players):
-			#players[i].playerBoxColor = boxes[i].color
+			print(players[i].pos)
 			fill_rect(players[i], boxes[players[i].pos])
 			boxCopy.append(boxes[players[i].pos])
+		else:
+			boxes[i].visible = false
+	boxes = boxCopy
+
+
+func fill_panel_restore(players):
+	var boxCopy = []
+	for i in len(boxes):
+		if i < len(players):
+			print(players[i].pos)
+			fill_rect(players[i], boxes[players[i].beginPos])
+			boxCopy.append(boxes[players[i].beginPos])
 		else:
 			boxes[i].visible = false
 	boxes = boxCopy
@@ -50,6 +62,7 @@ func add_noob(player, rect, noob):
 func update_standings(players):
 	var noob = _check_for_noob(players)
 	for i in len(players):
+		print(players[i].playerName, i)
 		var newPosition = boxes[i].global_position
 		players[i].playerBox.newPosition = newPosition
 		players[i].playerBox.update_content(players[i])
@@ -73,3 +86,7 @@ func move_dnf(player):
 	boxes[dnf_amount].color = "#424949"
 	dnf_amount -= 1
 
+
+func winner_chicken_dinner(players):
+	update_standings(players)
+	boxes[0].color = "#F4C000"

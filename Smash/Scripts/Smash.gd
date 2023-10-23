@@ -1,19 +1,6 @@
 extends Node
 
-var testPlayers = { 
-	"Mario": { "sprite": "res://Pics/Fighters/Mario.png" }, 
-	"Donkey Kong": { "sprite": "res://Pics/Fighters/DonkeyKong.png" }, 
-	"Terry": { "sprite": "res://Pics/Fighters/Terry.png" }, 
-	"Incineroar": { "sprite": "res://Pics/Fighters/Incineroar.png" }, 
-	"KRool": { "sprite": "res://Pics/Fighters/Krool.png" }, 
-	"Bowser": { "sprite": "res://Pics/Fighters/Bowser.png" }, 
-	"Kirby": { "sprite": "res://Pics/Fighters/Kirby.png" }, 
-	"Dedede": { "sprite": "res://Pics/Fighters/DDD.png" }, 
-	"Wario": { "sprite": "res://Pics/Fighters/Wario.png" }, 
-	"Ike": { "sprite": "res://Pics/Fighters/Ike.png" }, 
-	"Ridley": { "sprite": "res://Pics/Fighters/Ridley.png" }, 
-	"Jigglypuff": { "sprite": "res://Pics/Fighters/Jiggly.png" } 
-}
+var testPlayers
 
 var players = []
 var positions = []
@@ -30,22 +17,33 @@ var dnf = false
 var start_pos = []
 var made_actions = []
 
+var score_goal = 0
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	Player = load("res://Scripts/Player.gd")
+	
+	var restoreData = FileAccess.open("saveState.save", FileAccess.READ)
 	var data = FileAccess.open("smashers.smash", FileAccess.READ)
-	if data:
+	if restoreData:
+		var restore = restoreData.get_line()
+		var resJson = JSON.new()
+		var error = resJson.parse(restore)
+		restore(resJson.data)
+	elif data:
 		var json_string = data.get_line()
 		var json = JSON.new()
 		var error = json.parse(json_string)
 		testPlayers = json.data
+		score_goal = int(data.get_line())
 
-	for player in testPlayers:
-		var newPlayer = Player.new()
-		newPlayer.playerName = player
-		newPlayer.add_texture(testPlayers[player]["sprite"])
-		players.append(newPlayer)
-	shuffle_players()
+		for player in testPlayers:
+			var newPlayer = Player.new()
+			newPlayer.playerName = player
+			newPlayer.add_texture(testPlayers[player]["sprite"])
+			players.append(newPlayer)
+		shuffle_players()
+	
 	_get_player_positions()
 	_assign_player_start_pos()
 	
@@ -54,12 +52,14 @@ func _ready():
 		player._add_name()
 		$Button/DNFButton.get_popup().add_item(player.playerName)
 	$Button/DNFButton.get_popup().index_pressed.connect(_on_dnf_button_pressed)	
-	$PlayerPanel.fill_panel(players)
-	
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(_delta):
-	pass
+	if restoreData:
+		assign_restore_position()
+		$PlayerPanel.fill_panel_restore(players)
+		$RestoreTimer.start()
+		start_pos.assign(players)
+	else:
+		$PlayerPanel.fill_panel(players)
+	$Timer.start()
 
 
 func _assign_player_start_pos():
@@ -72,6 +72,7 @@ func shuffle_players():
 	for i in len(players):
 		var chosenPlayer = players.pick_random()
 		chosenPlayer.pos = i
+		chosenPlayer.beginPos = i
 		playersCopy.append(chosenPlayer)
 		players.erase(chosenPlayer)
 	players.assign(playersCopy)
@@ -107,6 +108,8 @@ func winner_move(number):
 					players[i].pos = len(players)-1
 					players[i].lastStreak.append(players[i].streak)
 					players[i].streak = 0
+					if players[i].wins == score_goal:
+						winrar(players, players[i].playerName)
 			elif skip:
 				if players[i].pos == number:
 					players[i].pos = len(players)-1
@@ -115,13 +118,9 @@ func winner_move(number):
 
 	for i in len(players):
 		players[i].move(positions[players[i].pos].position) # I will not ask for forgiveness
-	var copyPlayers = []
-	copyPlayers.assign(players)
-	copyPlayers.sort_custom(_custom_sort)
-	for i in len(copyPlayers):
-		var playerIndex = players.find(copyPlayers[i])
-		players[playerIndex].scorePos = i
-	$PlayerPanel.update_standings(players)
+	update_player_standings()
+	get_tree().call_group("players", "kill_tween")
+	$Timer.start()
 	if skip:
 		made_actions.append(-number-1)
 	else:
@@ -187,21 +186,14 @@ func dnf_action(dnf_player):
 	
 	for i in len(players):
 		players[i].move(positions[players[i].pos].position)
-	$PlayerPanel.update_standings(players)
-	#made_actions.append(dnf_player)
+	update_player_standings()
 	made_actions = []
-
+	save_state()
 
 func _on_revert_button_pressed():
 	var last_made_action = made_actions.pop_back()
 	if typeof(last_made_action) == TYPE_INT:
-		print(last_made_action)
 		reverse_move(last_made_action)
-	elif typeof(last_made_action) == TYPE_OBJECT:
-		print(last_made_action)
-	else:
-		print(typeof(last_made_action))
-		print(last_made_action)
 
 
 func reverse_move(number):
@@ -231,13 +223,9 @@ func reverse_move(number):
 				player.pos += 1
 	for i in len(players):
 		players[i].move(positions[players[i].pos].position) # I will not ask for forgiveness
-	var copyPlayers = []
-	copyPlayers.assign(players)
-	copyPlayers.sort_custom(_custom_sort)
-	for i in len(copyPlayers):
-		var playerIndex = players.find(copyPlayers[i])
-		players[playerIndex].scorePos = i
-	$PlayerPanel.update_standings(players)
+	update_player_standings()
+	get_tree().call_group("players", "kill_tween")
+	$Timer.start()
 
 
 func add_dnf_player_back():
@@ -252,10 +240,64 @@ func save_state():
 
 func save():
 	var save_state = {
-		"actions": made_actions,
+		"score_to_win": score_goal,
 		"players": {}
 	}
 	for player in start_pos:
 		var player_stats = player.save_stats()
 		save_state["players"][player.playerName] = player_stats
 	return save_state
+
+
+func update_player_standings():
+	var copyPlayers = []
+	copyPlayers.assign(players)
+	copyPlayers.sort_custom(_custom_sort)
+	for i in len(copyPlayers):
+		var playerIndex = players.find(copyPlayers[i])
+		players[playerIndex].scorePos = i
+	$PlayerPanel.update_standings(copyPlayers)
+
+
+func _on_timer_timeout():
+	get_tree().call_group("players", "tween_player")
+
+
+func winrar(players, winner):
+	$PlayerPanel.winner_chicken_dinner(players)
+	$WinnerLabel.text = winner + " WON!"
+	$SkipButton.disabled = true
+	$RevertButton.disabled = true
+	$Button/DNFButton.disabled = true
+	$playerPositions/Pos1/Button.disabled = true
+	$playerPositions/Pos2/Button2.disabled = true
+	$playerPositions/Pos3/Button3.disabled = true
+	$playerPositions/Pos4/Button4.disabled = true
+
+
+func restore(restoredJson):
+	var resPlayers = restoredJson["players"]
+	score_goal = restoredJson["score_to_win"]
+	players.resize(len(resPlayers))
+	for player in resPlayers:
+		var newPlayer = Player.new()
+		newPlayer.playerName = resPlayers[player]["playerName"]
+		newPlayer.dnf = resPlayers[player]["dnf"]
+		newPlayer.lastStreak = resPlayers[player]["lastStreak"]
+		newPlayer.played = resPlayers[player]["played"]
+		newPlayer.pos = resPlayers[player]["pos"]
+		newPlayer.scorePos = resPlayers[player]["scorePos"]
+		newPlayer.streak = resPlayers[player]["streak"]
+		newPlayer.wins = resPlayers[player]["wins"]
+		newPlayer.add_texture(resPlayers[player]["playerSprite"])
+		newPlayer.beginPos = resPlayers[player]["beginPos"]
+		players[newPlayer.beginPos] = newPlayer
+	$PlayerPanel
+
+func assign_restore_position():
+	for player in players:
+		player.move(positions[player.pos].position)
+
+
+func _on_restore_timer_timeout():
+	update_player_standings()
