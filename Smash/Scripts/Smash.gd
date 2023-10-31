@@ -21,6 +21,7 @@ var score_goal = 0
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	print($PlayerPanel.size)
 	Player = load("res://Scripts/Player.gd")
 	
 	var restoreData = FileAccess.open("saveState.save", FileAccess.READ)
