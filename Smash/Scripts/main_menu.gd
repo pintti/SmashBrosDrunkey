@@ -6,6 +6,7 @@ func _on_kys_pressed():
 
 
 func _on_palauta_pressed():
+	get_node("/root/Restore").restore_state = true
 	get_tree().change_scene_to_file("res://Scripts/Smash.tscn")
 
 

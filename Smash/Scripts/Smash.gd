@@ -25,12 +25,14 @@ func _ready():
 	
 	var restoreData = FileAccess.open("saveState.save", FileAccess.READ)
 	var data = FileAccess.open("smashers.smash", FileAccess.READ)
-	if restoreData:
+	
+	if get_node("/root/Restore").restore_state and restoreData:
+		print(get_node("/root/Restore").restore_state)
 		var restore = restoreData.get_line()
 		var resJson = JSON.new()
 		var error = resJson.parse(restore)
 		restore(resJson.data)
-	elif data:
+	else:
 		var json_string = data.get_line()
 		var json = JSON.new()
 		var error = json.parse(json_string)
