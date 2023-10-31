@@ -110,7 +110,7 @@ func winner_move(number):
 					players[i].pos = len(players)-1
 					players[i].lastStreak.append(players[i].streak)
 					players[i].streak = 0
-					if players[i].wins == score_goal:
+					if players[i].wins == score_goal + 1:
 						winrar(players, players[i].playerName)
 			elif skip:
 				if players[i].pos == number:
