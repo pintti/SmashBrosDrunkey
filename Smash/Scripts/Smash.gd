@@ -52,8 +52,8 @@ func _ready():
 	for player in players:
 		add_child(player)
 		player._add_name()
-		$Button/DNFButton.get_popup().add_item(player.playerName)
-	$Button/DNFButton.get_popup().index_pressed.connect(_on_dnf_button_pressed)	
+		$DNFButton.get_popup().add_item(player.playerName)
+	$DNFButton.get_popup().index_pressed.connect(_on_dnf_button_pressed)	
 	if restoreData:
 		assign_restore_position()
 		$PlayerPanel.fill_panel_restore(players)
@@ -155,8 +155,8 @@ func _on_button_toggled(button_pressed):
 
 
 func _on_dnf_button_pressed(player):
-	var dnf_player = $Button/DNFButton.get_popup().get_item_text(player)
-	$Button/DNFButton.get_popup().remove_item(player)
+	var dnf_player = $DNFButton.get_popup().get_item_text(player)
+	$DNFButton.get_popup().remove_item(player)
 	for curPlayer in players:
 		if curPlayer.playerName == dnf_player:
 			dnf_action(curPlayer)

@@ -1,9 +1,19 @@
-[gd_scene load_steps=5 format=3 uid="uid://dex5xrj8xlju4"]
+[gd_scene load_steps=10 format=3 uid="uid://dex5xrj8xlju4"]
 
 [ext_resource type="Script" path="res://Scripts/Smash.gd" id="1_byf4q"]
 [ext_resource type="Script" path="res://Scripts/PlayerStatus.gd" id="2_72vh3"]
 [ext_resource type="Texture2D" uid="uid://fek0fk2bicov" path="res://Pics/bg_smash.png" id="2_kybs0"]
 [ext_resource type="Script" path="res://Scripts/HBoxSizer.gd" id="2_yjq0y"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_v6ffk"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_p83jn"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_y01xb"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ip8ou"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dwyn8"]
 
 [node name="Smash" type="Node"]
 script = ExtResource("1_byf4q")
@@ -920,30 +930,24 @@ offset_top = -0.0800171
 offset_right = -0.440002
 offset_bottom = 0.320007
 
-[node name="Button" type="Button" parent="."]
-anchors_preset = -1
-anchor_left = 0.039
-anchor_top = 0.069
-anchor_right = 0.07
-anchor_bottom = 0.111
-offset_left = -41.92
-offset_top = 637.32
-offset_right = -42.6
-offset_bottom = 637.08
-theme_override_font_sizes/font_size = 15
-button_mask = 4
-text = "DNF"
-
-[node name="DNFButton" type="MenuButton" parent="Button"]
-layout_mode = 1
+[node name="DNFButton" type="MenuButton" parent="."]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -1.0
-offset_top = 2.0
-offset_right = -1.0
+offset_left = 7.0
+offset_top = 689.0
+offset_right = -1230.0
+offset_bottom = 7.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_v6ffk")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_p83jn")
+theme_override_styles/hover = SubResource("StyleBoxFlat_y01xb")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_ip8ou")
+theme_override_styles/focus = SubResource("StyleBoxFlat_dwyn8")
+toggle_mode = false
+action_mode = 1
+text = "DNF"
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 0.5
