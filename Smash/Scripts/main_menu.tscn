@@ -1,49 +1,173 @@
-[gd_scene load_steps=2 format=3 uid="uid://cthsg4l52oa25"]
+[gd_scene load_steps=8 format=3 uid="uid://cthsg4l52oa25"]
 
 [ext_resource type="Script" path="res://Scripts/main_menu.gd" id="1_dpa3f"]
+[ext_resource type="Texture2D" uid="uid://dr2kef4d8sxj" path="res://Pics/Menu/Smash.png" id="2_nfytd"]
+[ext_resource type="Texture2D" uid="uid://ddgw867j65jg2" path="res://Pics/Menu/Beer.png" id="2_r0g65"]
+[ext_resource type="Texture2D" uid="uid://hfjy4jbqdp3d" path="res://Pics/Menu/nimetön.png" id="3_htneo"]
+[ext_resource type="Texture2D" uid="uid://ckftl7sj2g14s" path="res://Pics/Menu/stats.png" id="3_ug737"]
+[ext_resource type="Texture2D" uid="uid://if44hv511b2q" path="res://Pics/Menu/KYS.png" id="4_vrpa8"]
+[ext_resource type="Texture2D" uid="uid://duqf51gdpsu67" path="res://Pics/Menu/RANDOM.png" id="5_dgfwm"]
 
 [node name="MainMenu" type="Node"]
 script = ExtResource("1_dpa3f")
 
 [node name="Smash" type="Button" parent="."]
+self_modulate = Color(1, 1, 1, 0)
 anchors_preset = -1
-anchor_left = 0.047
-anchor_top = 0.075
-anchor_right = 0.047
-anchor_bottom = 0.075
-offset_left = -0.160004
-offset_right = 465.84
-offset_bottom = 258.0
+anchor_left = 0.102
+anchor_top = 0.165
+anchor_right = 0.481
+anchor_bottom = 0.553
+offset_left = -112.56
+offset_top = -19.8
+offset_right = 17.3199
+offset_bottom = 5.83997
 text = "SMASH"
 
+[node name="TextureRect" type="TextureRect" parent="Smash"]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 8.0
+offset_right = 671.0
+offset_bottom = 337.0
+texture = ExtResource("2_nfytd")
+
 [node name="PelaajatStats" type="Button" parent="."]
-offset_left = 547.0
-offset_top = 40.0
-offset_right = 914.0
-offset_bottom = 187.0
+self_modulate = Color(1, 1, 1, 0)
+anchors_preset = -1
+anchor_left = 0.559
+anchor_top = 0.186
+anchor_right = 0.891
+anchor_bottom = 0.412
+offset_left = -12.52
+offset_top = -24.92
+offset_right = 124.52
+offset_bottom = 0.359985
 text = "Pelaaja statsit"
 
+[node name="TextureRect" type="TextureRect" parent="PelaajatStats"]
+layout_mode = 0
+offset_left = -15.0
+offset_top = -10.0
+offset_right = 579.0
+offset_bottom = 197.0
+texture = ExtResource("3_ug737")
+
 [node name="KYS" type="Button" parent="."]
-offset_left = 568.0
-offset_top = 337.0
-offset_right = 939.0
-offset_bottom = 514.0
+self_modulate = Color(1, 1, 1, 0)
+anchors_preset = -1
+anchor_left = 0.53
+anchor_top = 0.611
+anchor_right = 0.988
+anchor_bottom = 0.979
+offset_left = 0.599976
+offset_top = 0.0799866
+offset_right = 0.359985
+offset_bottom = 0.119995
 text = "KYS
 "
 
+[node name="TextureRect" type="TextureRect" parent="KYS"]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 3.0
+offset_right = 531.0
+offset_bottom = 268.0
+texture = ExtResource("4_vrpa8")
+
 [node name="Dunno" type="Button" parent="."]
-offset_left = 594.0
-offset_top = 203.0
-offset_right = 885.0
-offset_bottom = 295.0
+self_modulate = Color(1, 1, 1, 0)
+anchors_preset = -1
+anchor_left = 0.598
+anchor_top = 0.439
+anchor_right = 0.873
+anchor_bottom = 0.56
+offset_left = 0.559937
+offset_top = -0.0800171
+offset_right = 143.56
+offset_bottom = 9.79999
 text = "Random"
 
+[node name="TextureRect" type="TextureRect" parent="Dunno"]
+layout_mode = 0
+offset_left = -40.0
+offset_top = -11.0
+offset_right = 502.0
+offset_bottom = 115.0
+texture = ExtResource("5_dgfwm")
+
 [node name="Palauta" type="Button" parent="."]
-offset_left = 111.0
-offset_top = 344.0
-offset_right = 454.0
-offset_bottom = 494.0
+self_modulate = Color(1, 1, 1, 0)
+anchors_preset = -1
+anchor_left = 0.022
+anchor_top = 0.602
+anchor_right = 0.498
+anchor_bottom = 0.989
+offset_left = -0.160002
+offset_top = -9.44003
+offset_right = -0.440063
+offset_bottom = -0.0800171
 text = "Palauta
 "
 
+[node name="TextureRect" type="TextureRect" parent="Palauta"]
+layout_mode = 0
+offset_left = -7.0
+offset_top = -12.0
+offset_right = 610.0
+offset_bottom = 292.0
+texture = ExtResource("3_htneo")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_left = 540.0
+offset_top = 233.0
+offset_right = 788.0
+offset_bottom = 468.0
+texture = ExtResource("2_r0g65")
+expand_mode = 1
+
+[node name="Labels" type="Node" parent="."]
+
+[node name="Label" type="Label" parent="Labels"]
+offset_left = 509.0
+offset_top = 10.0
+offset_right = 588.0
+offset_bottom = 133.0
+theme_override_font_sizes/font_size = 120
+text = "S"
+
+[node name="Label2" type="Label" parent="Labels"]
+offset_left = 566.0
+offset_top = 10.0
+offset_right = 649.0
+offset_bottom = 133.0
+theme_override_font_sizes/font_size = 120
+text = "M"
+
+[node name="Label3" type="Label" parent="Labels"]
+offset_left = 649.0
+offset_top = 10.0
+offset_right = 728.0
+offset_bottom = 133.0
+theme_override_font_sizes/font_size = 120
+text = "A"
+
+[node name="Label4" type="Label" parent="Labels"]
+offset_left = 709.0
+offset_top = 10.0
+offset_right = 788.0
+offset_bottom = 133.0
+theme_override_font_sizes/font_size = 120
+text = "S"
+
+[node name="Label5" type="Label" parent="Labels"]
+offset_left = 769.0
+offset_top = 10.0
+offset_right = 852.0
+offset_bottom = 133.0
+theme_override_font_sizes/font_size = 120
+text = "H"
+
 [connection signal="pressed" from="Smash" to="." method="_on_smash_pressed"]
+[connection signal="pressed" from="KYS" to="." method="_on_kys_pressed"]
+[connection signal="pressed" from="Palauta" to="." method="_on_palauta_pressed"]

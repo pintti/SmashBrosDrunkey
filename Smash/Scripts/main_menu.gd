@@ -1,13 +1,13 @@
 extends Node
 
 
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	pass # Replace with function body.
+func _on_kys_pressed():
+	get_tree().quit()
 
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	pass
+func _on_palauta_pressed():
+	get_tree().change_scene_to_file("res://Scripts/Smash.tscn")
 
-	
+
+func _on_smash_pressed():
+	get_tree().change_scene_to_file("res://Scripts/char_select.tscn")
