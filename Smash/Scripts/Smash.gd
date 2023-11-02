@@ -21,14 +21,12 @@ var score_goal = 0
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	print($PlayerPanel.size)
 	Player = load("res://Scripts/Player.gd")
 	
 	var restoreData = FileAccess.open("saveState.save", FileAccess.READ)
 	var data = FileAccess.open("smashers.smash", FileAccess.READ)
 	
 	if get_node("/root/Restore").restore_state and restoreData:
-		print(get_node("/root/Restore").restore_state)
 		var restore = restoreData.get_line()
 		var resJson = JSON.new()
 		var error = resJson.parse(restore)
@@ -64,6 +62,22 @@ func _ready():
 		$PlayerPanel.fill_panel(players)
 	$Timer.start()
 
+
+func _process(_delta):
+	if Input.is_action_just_released("Escape"):
+		get_tree().quit()
+	if Input.is_action_just_released("Winmove1"):
+		winner_move(0)
+	if Input.is_action_just_released("Winmove2"):
+		winner_move(1)
+	if Input.is_action_just_released("Winmove3"):
+		winner_move(2)
+	if Input.is_action_just_released("Winmove4"):
+		winner_move(3)
+	if Input.is_action_just_pressed("SkipButton"):
+		_on_button_toggled(true)
+	elif Input.is_action_just_released("SkipButton"):
+		_on_button_toggled(false)
 
 func _assign_player_start_pos():
 	for i in len(players):
@@ -146,6 +160,7 @@ func _on_button_3_pressed():
 func _on_button_4_pressed():
 	winner_move(3)
 
+
 func _on_button_toggled(button_pressed):
 	if button_pressed:
 		$SkipButton.modulate = Color(1, 0, 0)
@@ -190,13 +205,19 @@ func dnf_action(dnf_player):
 	for i in len(players):
 		players[i].move(positions[players[i].pos].position)
 	update_player_standings()
-	made_actions = []
-	save_state()
+	made_actions = [dnf_player]
+
+
+func dnf_restore(dnf_player):
+	pass
+
 
 func _on_revert_button_pressed():
 	var last_made_action = made_actions.pop_back()
 	if typeof(last_made_action) == TYPE_INT:
 		reverse_move(last_made_action)
+	else:
+		print(last_made_action)
 
 
 func reverse_move(number):
@@ -230,10 +251,6 @@ func reverse_move(number):
 	get_tree().call_group("players", "kill_tween")
 	$Timer.start()
 
-
-func add_dnf_player_back():
-	# really?
-	pass
 
 func save_state():
 	var saved_stats = save()
