@@ -1,0 +1,94 @@
+[gd_scene load_steps=4 format=3 uid="uid://cv527ufmjm4gr"]
+
+[ext_resource type="Script" path="res://Scripts/streamlayout/stream_layout.gd" id="1_s0em3"]
+[ext_resource type="PackedScene" uid="uid://cwo1c5q5t1sax" path="res://Scripts/streamlayout/player_spot.tscn" id="1_sps1x"]
+
+[sub_resource type="Theme" id="Theme_ni2c7"]
+BoxContainer/constants/separation = 0
+
+[node name="StreamLayout" type="VBoxContainer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_ni2c7")
+script = ExtResource("1_s0em3")
+
+[node name="Main" type="HBoxContainer" parent="."]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="LeftBar" type="VBoxContainer" parent="Main"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.2
+
+[node name="Control" type="Control" parent="Main/LeftBar"]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.1
+
+[node name="ColorRect" type="ColorRect" parent="Main/LeftBar/Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="Playerlist" type="VBoxContainer" parent="Main/LeftBar"]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.9
+
+[node name="ColorRect" type="ColorRect" parent="Main/LeftBar"]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.2
+color = Color(1, 0, 1, 1)
+
+[node name="Right" type="VBoxContainer" parent="Main"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Control" type="Control" parent="Main/Right"]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.1
+
+[node name="ColorRect" type="ColorRect" parent="Main/Right/Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="ColorRect" type="ColorRect" parent="Main/Right"]
+layout_mode = 2
+size_flags_vertical = 3
+color = Color(1, 0, 1, 1)
+
+[node name="Bottom" type="HBoxContainer" parent="Main/Right"]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.1
+
+[node name="PlayerSpot" parent="Main/Right/Bottom" instance=ExtResource("1_sps1x")]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="PlayerSpot2" parent="Main/Right/Bottom" instance=ExtResource("1_sps1x")]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="PlayerSpot3" parent="Main/Right/Bottom" instance=ExtResource("1_sps1x")]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="PlayerSpot4" parent="Main/Right/Bottom" instance=ExtResource("1_sps1x")]
+layout_mode = 2
+size_flags_horizontal = 3

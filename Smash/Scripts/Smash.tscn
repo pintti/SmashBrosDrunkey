@@ -1,9 +1,10 @@
-[gd_scene load_steps=10 format=3 uid="uid://dex5xrj8xlju4"]
+[gd_scene load_steps=11 format=3 uid="uid://dex5xrj8xlju4"]
 
 [ext_resource type="Script" path="res://Scripts/Smash.gd" id="1_byf4q"]
 [ext_resource type="Script" path="res://Scripts/PlayerStatus.gd" id="2_72vh3"]
 [ext_resource type="Texture2D" uid="uid://fek0fk2bicov" path="res://Pics/bg_smash.png" id="2_kybs0"]
 [ext_resource type="Script" path="res://Scripts/HBoxSizer.gd" id="2_yjq0y"]
+[ext_resource type="PackedScene" uid="uid://be8tq1v6o3vkw" path="res://Scripts/streamlayout/stream_layout_window.tscn" id="5_qu24w"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_v6ffk"]
 
@@ -971,6 +972,9 @@ vertical_alignment = 1
 [node name="RestoreTimer" type="Timer" parent="."]
 wait_time = 0.2
 one_shot = true
+
+[node name="StreamLayout" parent="." instance=ExtResource("5_qu24w")]
+visible = false
 
 [connection signal="pressed" from="playerPositions/Pos1/Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="playerPositions/Pos2/Button2" to="." method="_on_button_2_pressed"]
