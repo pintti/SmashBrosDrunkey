@@ -132,3 +132,15 @@ show_behind_parent = true
 position = Vector2(0, -34)
 texture = ExtResource("3_q5tw1")
 hframes = 25
+
+[node name="Percent" type="Label" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 30
+text = "VOITTO%
+"
+horizontal_alignment = 1
+vertical_alignment = 1

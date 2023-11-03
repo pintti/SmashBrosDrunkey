@@ -14,10 +14,14 @@ func _process(delta):
     $HBoxContainer/Wins/FireHolder/Firesheet.frame = int(fireframe)
     
 
-func set_values(pname, texture, wins, leader=false, jonne=false, flaming=false):
+func set_values(pname, texture, wins, played, leader=false, jonne=false, flaming=false):
     $HBoxContainer/NameHolder/Name.text = pname
     $HBoxContainer/Wins.text = str(wins)
     $HBoxContainer/Control/TextureRect.texture = texture
+    var winpers = 0
+    if played > 0:
+        winpers = int((wins/float(played))*100)
+    $HBoxContainer/Percent.text = str(winpers)+"%"
     if leader:
         $HBoxContainer/NameHolder/Name/Crownholder.show()
     else:

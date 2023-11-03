@@ -47,5 +47,5 @@ func update_visuals(players):
         var flaming = false
         if p.streak > 4:
             flaming = true
-        $Main/Right/Bottom.get_child(p.pos).set_values(p.playerName, p.playerSprite.texture, p.wins, leader, jonne, flaming)
+        $Main/Right/Bottom.get_child(p.pos).set_values(p.playerName, p.playerSprite.texture, p.wins, p.played, leader, jonne, flaming)
         

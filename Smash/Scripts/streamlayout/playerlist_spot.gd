@@ -24,6 +24,10 @@ func update_values(all=false, jonne=false):
     $PlayerlistSpot/VBoxContainer/HBoxContainer/Wins.text = str(player.wins)
     $PlayerlistSpot/VBoxContainer/HBoxContainer/Streak.text = str(player.streak)
     $PlayerlistSpot/VBoxContainer/HBoxContainer/Played.text = str(player.played)
+    var winpers = 0
+    if player.played > 0:
+        winpers = int((player.wins/float(player.played))*100)
+    $PlayerlistSpot/VBoxContainer/HBoxContainer/Percent.text = str(winpers)+"%"
 
     if player.pos < 4:
         $PlayerlistSpot/VBoxContainer/HBoxContainer/StreakLabel.text = "Streak"
