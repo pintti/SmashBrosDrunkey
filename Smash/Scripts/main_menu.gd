@@ -1,6 +1,7 @@
 extends Node
 
 
+
 func _on_kys_pressed():
     get_tree().quit()
 

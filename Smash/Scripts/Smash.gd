@@ -149,6 +149,13 @@ func winner_move(number):
 func _custom_sort(a, b):
     if a.wins > b.wins:
         return true
+    if a.wins == b.wins:
+        if max(a.pos, 3) < max(b.pos, 3):
+            return true
+        if max(a.pos, 3) == max(b.pos, 3):
+            if a.played < b.played:
+                return true
+            
     return false
 
 

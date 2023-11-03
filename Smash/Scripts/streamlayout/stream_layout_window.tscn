@@ -2,7 +2,9 @@
 
 [ext_resource type="Script" path="res://Scripts/streamlayout/stream_layout_window.gd" id="1_3cren"]
 [ext_resource type="PackedScene" uid="uid://cv527ufmjm4gr" path="res://Scripts/streamlayout/stream_layout.tscn" id="1_a11tq"]
-[ext_resource type="Texture2D" uid="uid://pn2pd1s6ufgh" path="res://Scripts/streamlayout/supersmashbros_2679253.jpg" id="3_t488u"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_v4gla"]
+load_path = "res://.godot/imported/supersmashbros_2679253.jpg-dee454c96a36143139415d84e688fef1.ctex"
 
 [node name="StreamLayout" type="Window"]
 mode = 3
@@ -21,4 +23,4 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("3_t488u")
+texture = SubResource("CompressedTexture2D_v4gla")
